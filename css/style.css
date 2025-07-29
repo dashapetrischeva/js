@@ -94,6 +94,7 @@ body {
 }
 
 .list__link {
+  line-height: 150%;
   transition: color 0.5s;
 }
 @media (any-hover: hover) and (any-pointer: fine) {

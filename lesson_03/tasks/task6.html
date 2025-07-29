@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 6</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 6</h1>
+					<div class="task">
+
+						<h2>
+							З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.
+						</h2>
+
+						<script>
+							const dayWeekNum = parseInt(prompt('Введіть номер дня тижня з 1 до 7'))
+							document.write(`<h2 class="title-solution">Рішення:</h2>`)
+
+							let dayWeekName
+							switch (dayWeekNum) {
+								case 1:
+									dayWeekName = 'Це понеділок'
+									break
+								case 2:
+									dayWeekName = 'Це вівторок'
+									break
+								case 3:
+									dayWeekName = 'Це середа'
+									break
+								case 4:
+									dayWeekName = 'Це четвер'
+									break
+								case 5:
+									dayWeekName = `Це п'ятниця`
+									break
+								case 6:
+									dayWeekName = 'Це субота'
+									break
+								case 7:
+									dayWeekName = 'Це неділя'
+									break
+								default:
+									dayWeekName = 'Ви ввели некоректні дані'
+									break
+							}
+							document.write(`<p class="solution">${dayWeekName}</p>`)
+						</script>
+					</div>
+				</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

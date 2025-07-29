@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 7</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 7</h1>
+					<div class="task">
+
+						<h2>
+							З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься
+						</h2>
+
+						<script>
+							const monthNum = parseInt(prompt('Введіть номер місяця від 1 до 12', '1'))
+							document.write(`<h2 class="title-solution">Рішення:</h2>`)
+							let season
+							if (monthNum == 1 || monthNum == 2 || monthNum == 12) {
+								season = 'Це зима'
+							} else if (monthNum >= 3 && monthNum <= 5) {
+								season = 'Це весна'
+							} else if (monthNum >= 6 && monthNum <= 8) {
+								season = 'Це літо'
+							} else if (monthNum >= 9 && monthNum <= 11) {
+								season = 'Це осінь'
+							} else {
+								season = 'Ви ввели некоректні дані'
+							}
+							document.write(`<p class="solution">${season}</p>`) 
+						</script>
+					</div>
+				</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

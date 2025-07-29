@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 1</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 1</h1>
+					<div class="task">
+
+						<h2>
+							З клавіатури вводяться імена двох дітей та кількість у них цукерок. Вивести на екран ім’я тієї
+							дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова.
+						</h2>
+						<script>
+							const child1Name = prompt('Введіть ім\'я першої дитини ', 'Коля')
+							const child2Name = prompt('Введіть ім\'я другої дитини ', 'Маша')
+							const candyNumChild1 = parseInt(prompt(`Введіть кількість цукерок у першої дитини`, '9'))
+							const candyNumChild2 = parseInt(prompt(`Введіть кількість цукерок у другої дитини`, '5'))
+							document.write(`
+							<h2 class="title-solution">Рішення:</h2>`)
+							if (candyNumChild1 > candyNumChild2)
+								document.write(`<p class="solution">${child1Name} має більше цукерок.</p>`)
+
+							else if (candyNumChild1 == candyNumChild2) {
+								document.write(`<p class="solution">Кількість цукерок однакова.</p>`)
+							}
+							else
+								document.write(`<p class="solution">${child2Name} має більше цукерок.</p>`)
+						</script>
+
+					</div>
+				</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
