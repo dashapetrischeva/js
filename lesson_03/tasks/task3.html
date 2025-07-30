@@ -39,12 +39,13 @@
 							document.write(`<h2 class="title-solution">Рішення:</h2>`)
 							if (userNum === randNum)
 								document.write(`<p class="solution"><strong>Ви вгадали!</strong></p>`)
-							else
+							else {
 								userNum = parseInt(prompt('Ви не вгадали. Введіть  число'))
-							if (userNum === randNum)
-								document.write(`<p class="solution"><strong>Ви вгадали!</strong></p>`)
-							else
-								document.write(`<p class="solution">Ви не вгадали. Загадане число: ${randNum} </p>`)					
+								if (userNum === randNum)
+									document.write(`<p class="solution"><strong>Ви вгадали!</strong></p>`)
+								else
+									document.write(`<p class="solution">Ви не вгадали. Загадане число: ${randNum} </p>`)
+							}			
 						</script>
 					</div>
 				</div>

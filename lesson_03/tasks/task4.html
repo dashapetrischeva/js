@@ -35,25 +35,21 @@
 							const userAge = parseInt(prompt('Введіть ваш вік'))
 							document.write(`<h2 class="title-solution">Рішення:</h2>`)
 							let res
-							if (userAge >= 2 && userAge < 7)
+							if (userAge < 2 || userAge > 120) res = 'Ви ввели некоректні дані'
+							else if (userAge < 7)
 								res = 'Ви дитина, яка ходить до садочку'
 
-							else if
-								(userAge >= 7 && userAge < 17)
+							else if (userAge < 17)
 								res = 'Ви дитина, яка ходить до школи'
 
-							else if (userAge >= 17 && userAge <= 22)
+							else if (userAge < 23)
 								res = 'Ви студент'
 
-							else if (userAge > 22 && userAge < 65)
+							else if (userAge < 65)
 								res = 'Ви працівник'
 
-							else if (userAge >= 65 && userAge <= 120)
+							else if (userAge <= 120)
 								res = 'Ви пенсіонер'
-
-							else
-								res = 'Ви ввели некоректні дані'
-
 							document.write(`<p class="solution">${res}</p>`)
 						</script>
 					</div>
