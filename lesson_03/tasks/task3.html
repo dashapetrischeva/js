@@ -37,19 +37,14 @@
 								minNum + Math.floor(Math.random() * (maxNum - minNum + 1)) //1-5
 							let userNum = parseInt(prompt('Введіть число від 1 до 5'))
 							document.write(`<h2 class="title-solution">Рішення:</h2>`)
-							if (userNum === randNum) {
+							if (userNum === randNum)
 								document.write(`<p class="solution"><strong>Ви вгадали!</strong></p>`)
-							}
-
-							else {
+							else
 								userNum = parseInt(prompt('Ви не вгадали. Введіть  число'))
-								if (userNum === randNum) {
-									document.write(`<p class="solution"><strong>Ви вгадали!</strong></p>`)
-								}
-								else {
-									document.write(`<p class="solution">Ви не вгадали. Загадане число: ${randNum} </p>`)
-								}
-							}
+							if (userNum === randNum)
+								document.write(`<p class="solution"><strong>Ви вгадали!</strong></p>`)
+							else
+								document.write(`<p class="solution">Ви не вгадали. Загадане число: ${randNum} </p>`)					
 						</script>
 					</div>
 				</div>
