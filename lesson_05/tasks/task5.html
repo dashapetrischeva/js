@@ -33,28 +33,29 @@
 
 						<script>
 							if (confirm('Почати тестування?')) {
-								document.write(`<h2 class="title-solution">Рішення:</h2>`);
+								document.write(`<h2 class="title-solution">Рішення:</h2>`)
 
-								const fieldWidth = parseInt(prompt(`Введіть ширину поля`, '5'));
-								const fieldHeight = parseInt(prompt(`Введіть висоту поля`, '5'));
-								let attemptsNumber = parseInt(prompt(`Введіть кількість спроб`, '10'));
+								const fieldWidth = parseInt(prompt(`Введіть ширину поля`, '5'))
+								const fieldHeight = parseInt(prompt(`Введіть висоту поля`, '5'))
+								let attemptsNumber = parseInt(prompt(`Введіть кількість спроб`, '10'))
 
-								const shipX = 1 + Math.floor(Math.random() * fieldWidth);
-								const shipY = 1 + Math.floor(Math.random() * fieldHeight);
+								const shipX = 1 + Math.floor(Math.random() * fieldWidth)
+								const shipY = 1 + Math.floor(Math.random() * fieldHeight)
 
-								let userShipX, userShipY;
+								let userShipX
+								let userShipY
 
 								while (attemptsNumber > 0 && (userShipX !== shipX || userShipY !== shipY)) {
-									userShipX = parseInt(prompt(`Введіть координату X (1 - ${fieldWidth})`));
-									userShipY = parseInt(prompt(`Введіть координату Y (1 - ${fieldHeight})`));
-									attemptsNumber--;
+									userShipX = parseInt(prompt(`Введіть координату X (1 - ${fieldWidth})`))
+									userShipY = parseInt(prompt(`Введіть координату Y (1 - ${fieldHeight})`))
+									attemptsNumber--
 
 									if (userShipX === shipX && userShipY === shipY) {
-										document.write(`Ти потопив корабель! Вітаю!`);
+										document.write(`Ти потопив корабель! Вітаю!`)
 									} else if (attemptsNumber > 0) {
-										alert(`Не влучив. Залишилось спроб: ${attemptsNumber}`);
+										alert(`Не влучив. Залишилось спроб: ${attemptsNumber}`)
 									} else {
-										document.write(`Кількість спроб вичерпана! Корабель був на (${shipX}, ${shipY})`);
+										document.write(`Кількість спроб вичерпана! Корабель був на (${shipX}, ${shipY})`)
 									}
 								}
 							}
