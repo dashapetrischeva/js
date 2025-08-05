@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 3</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 3</h1>
+					<div class="task">
+
+						<h2>
+							Знайти суму всіх непарних чисел, що знаходяться між заданими користувачем числами.
+						</h2>
+
+						<script>
+							if (confirm('Почати тестування?')) {
+								document.write(`<h2 class="title-solution">Рішення:</h2>`)
+								const userNum1 = parseInt(prompt(`Введіть перше число`, ''))
+								const userNum2 = parseInt(prompt(`Введіть друге число`, ''))
+								let oddNumbersSum = 0
+								for (let num = userNum1; num <= userNum2; num++) {
+									if (num % 2 !== 0) {
+										oddNumbersSum += num
+									}
+								}
+								document.write(`Cума всіх непарних чисел між ${userNum1} і ${userNum2} = ${oddNumbersSum}`)
+							}
+						</script>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

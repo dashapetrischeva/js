@@ -238,3 +238,16 @@ table tr td {
   line-height: 150%;
   font-style: italic;
 }
+
+.list--1 {
+  margin-left: 1.25rem;
+}
+.list--1 li {
+  list-style: disc;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #f0858b;
+  margin: 1em 0;
+}

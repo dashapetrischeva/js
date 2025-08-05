@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 4</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page page--5-4">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 4</h1>
+					<div class="task">
+
+						<h2>
+							<p>Вивести на екран N абзаців (N вводиться користувачем) за зразком:</p>
+							<img src="../../img/5/Hw-5-4.jpg" alt="Image">
+						</h2>
+
+						<script>
+							if (confirm('Почати тестування?')) {
+								document.write(`<h2 class="title-solution">Рішення:</h2>`)
+								const paragraphsNumber = parseInt(prompt(`Введіть кількість абзаців`, ''))
+
+								for (let p = 1; p <= paragraphsNumber; p++) {
+									document.write(`<h1 class="title title--margin-null">Заголовок ${p}</h1>`)
+									for (i = 1; i <= p; i++) {
+										document.write(`<p>Розділ ${p}, параграф ${i} </p>`)
+									}
+									document.write(`<hr>`)
+								}
+
+							}
+						</script>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
