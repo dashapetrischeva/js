@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 1</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 1</h1>
+					<div class="task">
+
+						<div class="task-description">
+							<p>Зобразити рівнобедрений трикутник із символів ^. Висоту задає користувач. Наприклад, на екрані
+								висота =5.</p>
+							<img src="../../img/6/1.jpg" alt="Image">
+						</div>
+						<script>
+
+							const height = parseInt(prompt(`Введіть висоту трикутника`, '5'))
+							document.write(`
+							<h2 class="title-solution">Рішення:</h2>`)
+							document.write(`<div class="triangle">`)
+							for (let i = 0; i < height; i++) {
+								document.write(`<p>`)
+								for (let j = 0; j < 2 * i + 1; j++) {
+									document.write(`^`)
+
+
+								}
+								document.write(`</p>`)
+
+							}
+							document.write(`</div>`)
+
+
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
