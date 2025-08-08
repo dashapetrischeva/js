@@ -263,7 +263,6 @@ hr {
   background-color: #f0858b;
   display: inline-block;
   padding: 0.625rem;
-}
-.triangle p {
-  text-align: center;
+  white-space: pre;
+  font-family: monospace;
 }

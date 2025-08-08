@@ -38,18 +38,35 @@
 							<h2 class="title-solution">Рішення:</h2>`)
 							document.write(`<div class="triangle">`)
 							for (let i = 0; i < height; i++) {
-								document.write(`<p>`)
+
+								let string = `<p>`
+								for (let k = 0; k < height - i - 1; k++) {
+									string += ' '
+								}
 								for (let j = 0; j < 2 * i + 1; j++) {
-									document.write(`^`)
+									string += `^`
 
 
 								}
-								document.write(`</p>`)
+								string += `</p>`
+								document.write(string)
 
 							}
 							document.write(`</div>`)
 
+							// 							const height = parseInt(prompt('Введіть висоту трикутника', '5'));
 
+							// 							document.write(`
+							//   <h2 class="title-solution">Рішення:</h2>
+							//   <div class="triangle" style="font-family: monospace; white-space: pre;">`);
+
+							// 							for (let i = 0; i < height; i++) {
+							// 								const spaces = ' '.repeat(height - i - 1);
+							// 								const symbols = '^'.repeat(2 * i + 1);
+							// 								document.write(spaces + symbols + '\n');
+							// 							}
+
+							// 							document.write(`</div>`);
 						</script>
 
 					</div>
