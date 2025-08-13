@@ -32,19 +32,21 @@
 						</h2>
 						<script>
 							if (confirm('Почати тестування?')) {
-								const message = 'JavaScript'
 								let rowsNumber = parseInt(prompt(`Введіть кількість рядків`, '5'))
 								let columnsNumber = parseInt(prompt(`Введіть кількість стовпців`, '5'))
 								function createTable(n, m) {
-									document.write(`<table>`)
+									const message = 'JavaScript'
+									let table
+									table = `<table>`
 									for (let i = 1; i <= n; i++) {
-										document.write(`<tr>`)
+										table += `<tr>`
 										for (let j = 1; j <= m; j++) {
-											document.write(`<td>${message}</td>`)
+											table += `<td>${message}</td>`
 										}
-										document.write(`</tr>`)
+										table += `</tr>`
 									}
-									document.write(`</table>`)
+									table += `</table>`
+									document.write(table)
 								}
 								document.write(`
 							<h2 class="title-solution">Рішення:</h2>`)
