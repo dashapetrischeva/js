@@ -33,15 +33,30 @@
 						<script>
 
 							if (confirm('Почати тестування?')) {
-								const minNum = 1
-								const maxNum = 4
-								const randNum = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
-								const imagePath = `<img src="../../img/7/${randNum}.jpg">`
-								function displayRandomImage(path) {
-									document.write(`<p>${path}</p>`)
+								function displayRandomImage(path1, path2, path3, path4) {
+									const minNum = 1
+									const maxNum = 4
+									const randNum = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
+									let imagePath
+									switch (randNum) {
+										case 1:
+											imagePath = path1;
+											break;
+										case 2:
+											imagePath = path2;
+											break;
+										case 3:
+											imagePath = path3;
+											break;
+										case 4:
+											imagePath = path4;
+											break;
+
+									}
+									document.write(`<p><img src="${imagePath}"></p>`)
 								}
 								document.write(`<h2 class="title-solution">Рішення:</h2>`)
-								displayRandomImage(imagePath)
+								displayRandomImage("../../img/7/1.jpg", "../../img/7/2.jpg", "../../img/7/3.jpg", "../../img/7/4.jpg")
 							}
 						</script>
 
