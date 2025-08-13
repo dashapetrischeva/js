@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 1</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 1</h1>
+					<div class="task">
+
+						<div class="task-description">
+							<p>Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</p>
+						</div>
+						<script>
+							if (confirm('Почати тестування?')) {
+								function isWorkingDay(dayNum) {
+									let answer
+									switch (dayNum) {
+										case 1:
+										case 2:
+										case 3:
+										case 4:
+										case 5:
+											answer = 'Так, це робочий день.'
+											break
+										case 6:
+										case 7:
+											answer = 'Ні, це вихідний день.'
+											break
+										default:
+											answer = 'Некоректні дані.'
+											break
+										// throw new Error('Некоректні дані.')
+									}
+									return answer
+								}
+								const userDayNum = parseInt(prompt(`Введіть номер дня тижня (1-7)`, '5'))
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2><div>
+							${isWorkingDay(userDayNum)}</div>`)
+
+							}
+
+
+
+
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

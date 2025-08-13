@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 3</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 3</h1>
+					<div class="task">
+
+						<div class="task-description">
+							<p>Створити окремі функції, які переводять:
+							<p>1) Сантиметри у дюйми;</p>
+							<p>2) Кілограми у фунти;</p>
+							<p>3) Кілометри у милі.</p>
+							</p>
+						</div>
+						<script>
+							if (confirm('Почати тестування?')) {
+								function cmToInches(cm) {
+									return cm / 2.54
+								}
+								function kgToPounds(kg) {
+									return kg * 2.205
+								}
+								function kmToMiles(km) {
+									return km / 1.609
+
+								}
+								const cmNumber = parseFloat(prompt(`Введіть кількість сантиметрів`, '345'))
+								const kgNumber = parseFloat(prompt(`Введіть кількість кілограм`, '15'))
+								const kmNumber = parseFloat(prompt(`Введіть кілометрів`, '250'))
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2>
+							<p> ${cmNumber} см = ${cmToInches(cmNumber).toFixed(2)} дюймів </p>
+							<p> ${kgNumber} кг = ${kgToPounds(kgNumber).toFixed(2)} фунтів </p>
+							<p> ${kmNumber} км = ${kmToMiles(kmNumber).toFixed(2)} миль </p>
+							`)
+							}
+
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

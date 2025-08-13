@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 5</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 5</h1>
+					<div class="task">
+
+						<h2>
+							Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень (шляхи до зображень
+							передаються у функцію)
+						</h2>
+						<script>
+
+							if (confirm('Почати тестування?')) {
+								const minNum = 1
+								const maxNum = 4
+								const randNum = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
+								const imagePath = `<img src="../../img/7/${randNum}.jpg">`
+								function displayRandomImage(path) {
+									document.write(`<p>${path}</p>`)
+								}
+								document.write(`<h2 class="title-solution">Рішення:</h2>`)
+								displayRandomImage(imagePath)
+							}
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
