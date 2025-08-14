@@ -220,9 +220,6 @@ table tr td {
   font-size: 1rem;
   color: #555;
 }
-.task p:not(:last-child) {
-  margin-bottom: 0.625rem;
-}
 .task p.solution {
   font-size: 1.125rem;
   line-height: 150%;
@@ -265,4 +262,8 @@ hr {
   padding: 0.625rem;
   white-space: pre;
   font-family: monospace;
+}
+
+div {
+  line-height: 1.5;
 }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 2</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 2</h1>
+					<div class="task">
+
+						<div class="task-description">
+							<p>Дано масив, який зберігає кількість відвідувачів магазину протягом тижня. Вивести на екран:</p>
+							<p>● номери днів, протягом яких кількість відвідувачів була меншою за 20;</p>
+							<p>● номери днів, коли кількість відвідувачів була мінімальною;</p>
+							<p>● номери днів, коли кількість відвідувачів була максимальною;</p>
+							<p>● загальну кількість клієнтів у робочі дні та окремо загальну кількість днів на вихідних.</p>
+						</div>
+						<script>
+							if (confirm('Почати тестування?')) {
+								function getTotalCustomersNumberWeekdays(arr) {
+									let totalNum = 0
+									for (let i = 0; i < 5; i++) {
+										totalNum += arr[i]
+									}
+									return totalNum
+								}
+								function getTotalCustomersNumberWeekends(arr) {
+									let totalNum = 0
+									for (let i = 5; i <= 6; i++) {
+										totalNum += arr[i]
+									}
+									return totalNum
+								}
+								function getMaxCustomersNumber(arr) {
+									let max = -Infinity
+									let maxNum = []
+									for (let i = 0; i < arr.length; i++) {
+										if (arr[i] > max) {
+											max = arr[i]
+											maxNum = [i + 1] // номери днів тижня з 1
+										}
+										else if (arr[i] === max) {
+											maxNum.push(i + 1)
+										}
+									}
+									return maxNum
+								}
+								function getMinCustomersNumber(arr) {
+									let min = Infinity
+									let minNum = []
+									for (let i = 0; i < arr.length; i++) {
+										if (arr[i] < min) {
+											min = arr[i]
+											minNum = [i + 1]
+										}
+										else if (arr[i] === min) {
+											minNum.push(i + 1)
+										}
+									}
+									return minNum
+								}
+								function getDaysNumbersVisitorsNumberLess20(arr) {
+									let num = []
+									for (let i = 0; i < arr.length; i++) {
+										if (arr[i] < 20) {
+											num.push(i + 1)
+										}
+									}
+									return num
+								}
+								const arrClientsNum = [90, 9, 100, 120, 19, 120, 9]
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2><div>
+							Загальна кількість клієнтів у робочі дні :<strong> ${getTotalCustomersNumberWeekdays(arrClientsNum)} </strong> </div>
+							<div>
+							Загальна кількість клієнтів у вихідні дні :<strong> ${getTotalCustomersNumberWeekends(arrClientsNum)} </strong></div>
+							<div>
+							Номери днів, коли кількість відвідувачів була максимальною :<strong> ${getMaxCustomersNumber(arrClientsNum)} </strong></div>
+							<div>
+							Номери днів, коли кількість відвідувачів була мінімальною :<strong> ${getMinCustomersNumber(arrClientsNum)} </strong></div>
+								<div>
+							Номери днів, протягом яких кількість відвідувачів була меншою за 20 :<strong> ${getDaysNumbersVisitorsNumberLess20(arrClientsNum)} </strong></div>
+							`)
+
+							}
+
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

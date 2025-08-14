@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 5</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 5</h1>
+					<div class="task">
+
+						<h2>
+							Дано одновимірний масив, у якому зберігається певна виграшна сума (елементи заповнюються
+							випадковим чином значеннями від -500 до 500). Надаючи користувачу можливість вибирати номери
+							елементів (поки він не відмовиться). Знаходити сумарний виграш.
+						</h2>
+						<script>
+
+							if (confirm('Почати тестування?')) {
+								const arrayElementsNumber = parseInt(prompt("Введіть кількість елементів у масиві:"))
+								function fillingArray(num) {
+									let arr = []
+									const minNum = -500
+									const maxNum = 500
+									for (let i = 0; i < num; i++) {
+										arr[i] = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
+									}
+									return arr
+								}
+								const winningAmounts = fillingArray(arrayElementsNumber)
+								function totalAmount(arr) {
+
+									let sum = 0
+									while (true) {
+										let ElementNum = prompt(`Введіть номер елемента (1-${arr.length}):`)
+										if (ElementNum === null) break
+										ElementNum = parseInt(ElementNum)
+
+										sum += arr[ElementNum - 1]
+
+									}
+									return sum
+								}
+
+
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2>
+							<div>Масив з виграшною сумою: ${winningAmounts} </div>
+							<hr>
+							<div>Сумарний виграш:<strong> ${totalAmount(winningAmounts)} грн.</strong></div>
+					
+							`)
+							}
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

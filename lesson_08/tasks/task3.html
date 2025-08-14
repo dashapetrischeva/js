@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 3</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 3</h1>
+					<div class="task">
+
+						<div class="task-description">
+							<p>Дано послідовність оцінок учня. Підрахувати кількість:</p>
+							<p>1) двійок</p>
+							<p>2) кількість хороших оцінок (добре, відмінно);</p>
+							<p>3) кількість оцінок, які нижче середнього.</p>
+						</div>
+						<script>
+							if (confirm('Почати тестування?')) {
+								function getTwoNumber(arr) {
+									let num = 0
+									for (let i = 0; i < arr.length; i++) {
+										if (arr[i] === 2)
+											num++
+									}
+									return num
+								}
+								function getGoodGradesNumber(arr) {
+									let num = 0
+									for (let i = 0; i < arr.length; i++) {
+										if (arr[i] === 4 || arr[i] === 5)
+											num++
+									}
+									return num
+								}
+								function getAverageScore(arr) {
+									let sum = 0
+									for (let i = 0; i < arr.length; i++) {
+										sum += arr[i]
+									}
+									return sum / arr.length
+								}
+								function getGradesLessAverage(arr) {
+									const average = getAverageScore(arr)
+									let num = 0
+									for (let i = 0; i < arr.length; i++) {
+										if (arr[i] < average)
+											num++
+									}
+									return num
+								}
+								const studentGrades = [2, 3, 4, 5, 5, 5, 2]
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2>
+							<div>Послідовність оцінок учня: ${studentGrades} </div>
+							<hr>
+							<div>Кількість двійок :<strong> ${getTwoNumber(studentGrades)}</strong> </div>
+							<div>
+							Кількість хороших оцінок (добре, відмінно) :<strong> ${getGoodGradesNumber(studentGrades)} </strong></div>
+						<div>
+							Кількість оцінок, які нижче середнього (${getAverageScore(studentGrades).toFixed(2)}) :<strong> ${getGradesLessAverage(studentGrades)} </strong></div>
+							`)
+
+							}
+
+
+
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

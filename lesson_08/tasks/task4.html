@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 4</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 4</h1>
+					<div class="task">
+
+						<div class="task-description">
+							<p>Дано послідовність платіжок протягом року. Знайти сумарну кількість грошей за:</p>
+							<p>1) за весь рік;</p>
+							<p>2) у першій половині року;</p>
+							<p>3) у другій половині року;</p>
+							<p>4) за літо;</p>
+							<p>5) за ІІ квартал;</p>
+							<p>6) за парні місяці (з парними номерами);</p>
+							<p>7) за місяці, які є початковими у сезоні (весна, літо, осінь, зима).</p>
+						</div>
+						<script>
+							if (confirm('Почати тестування?')) {
+								function getTotalAmount(arr) {
+									let sum = 0
+									for (let i = 0; i < arr.length; i++) {
+										sum += arr[i]
+									}
+									return sum
+								}
+								function getAmountFirstHalfYear(arr) {
+									let sum = 0
+									const arrHalf = arr.length / 2
+									for (let i = 0; i < arrHalf; i++) {
+										sum += arr[i]
+									}
+									return sum
+								}
+								function getAmountSecondHalfYear(arr) {
+									let sum = 0
+									const arrHalf = Math.floor(arr.length / 2)
+									for (let i = arrHalf; i < arr.length; i++) {
+										sum += arr[i]
+									}
+									return sum
+								}
+								function getAmountSummer(arr) {
+									let sum = 0
+									const summerStart = 5
+									const summerEnd = 8
+									for (let i = summerStart; i < summerEnd; i++) {
+										sum += arr[i]
+									}
+									return sum
+								}
+								function getAmountSecondQuarter(arr) {
+									let sum = 0
+									const secondQuarterStart = 3
+									const secondQuarterEnd = 6
+									for (let i = 0; i < arr.length; i++) {
+										sum += arr[i]
+									}
+									return sum
+								}
+								function getAmountEvenMonths(arr) {
+									let sum = 0
+									for (let i = 0; i < arr.length; i++) {
+										if (arr[i] % 2 !== 0) {
+											sum += arr[i]
+										}
+									}
+									return sum
+								}
+								function getAmountStartSeason(arr) {
+									let sum = 0
+									for (let i = 2; i < arr.length; i += 3) {
+										sum += arr[i]
+									}
+									return sum
+								}
+
+
+								const payments = [2000, 234, 5000, 46, 1000, 509, 2000, 1678, 1200, 290, 456, 678]
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2>
+							<div>Послідовність платіжок протягом року: ${payments} </div>
+							<hr>
+							<div>Сумарна кількість грошей за весь рік:<strong> ${getTotalAmount(payments)} грн.</strong></div>
+						<div>Сумарна кількість грошей у першій половині року:<strong> ${getAmountFirstHalfYear(payments)} грн.</strong></div>
+						<div>Сумарна кількість грошей у другій половині року:<strong> ${getAmountSecondHalfYear(payments)} грн.</strong></div>
+						<div>Сумарна кількість грошей за літо:<strong> ${getAmountSummer(payments)} грн.</strong></div>
+						<div>Сумарна кількість грошей за ІІ квартал:<strong> ${getAmountSecondQuarter(payments)} грн.</strong></div>
+						<div>Сумарна кількість грошей за парні місяці:<strong> ${getAmountEvenMonths(payments)} грн.</strong></div>
+						<div>Сумарна кількість грошей за місяці, які є початковими у сезоні (весна, літо, осінь, зима):<strong> ${getAmountStartSeason(payments)} грн.</strong></div>
+							`)
+							}
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
