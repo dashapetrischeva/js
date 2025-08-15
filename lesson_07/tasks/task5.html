@@ -53,10 +53,10 @@
 											break;
 
 									}
-									document.write(`<p><img src="${imagePath}"></p>`)
+									return `<p><img src="${imagePath}"></p>`
 								}
 								document.write(`<h2 class="title-solution">Рішення:</h2>`)
-								displayRandomImage("../../img/7/1.jpg", "../../img/7/2.jpg", "../../img/7/3.jpg", "../../img/7/4.jpg")
+								document.write(displayRandomImage("../../img/7/1.jpg", "../../img/7/2.jpg", "../../img/7/3.jpg", "../../img/7/4.jpg"))
 							}
 						</script>
 
