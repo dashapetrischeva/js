@@ -40,14 +40,19 @@
 									}
 									return sum / arr.length
 								}
-								function getCategory(arr) {
-									let cat
+								function getMinInArray(arr) {
+
 									let min = arr[0]
 									for (let i = 1; i < arr.length; i++) {
 										if (arr[i] < min) {
 											min = arr[i]
 										}
 									}
+									return min
+								}
+
+								function getCategory(min) {
+									let cat
 									switch (min) {
 										case 2:
 											cat = 'двійочник'
@@ -65,7 +70,7 @@
 								}
 								let arrScore = [5, 2, 3, 3, 5, 5, 4, 4, 4]
 								const AverageScore = getAverageScore(arrScore)
-								const category = getCategory(arrScore)
+								const category = getCategory(getMinInArray(arrScore))
 								document.write(`
 							<h2 class="title-solution">Рішення:</h2><div>
 								<div>Оцінки: ${arrScore} </div>
