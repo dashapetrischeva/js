@@ -74,17 +74,15 @@
 									let sum = 0
 									const secondQuarterStart = 3
 									const secondQuarterEnd = 6
-									for (let i = 0; i < arr.length; i++) {
+									for (let i = secondQuarterStart; i < secondQuarterEnd; i++) {
 										sum += arr[i]
 									}
 									return sum
 								}
 								function getAmountEvenMonths(arr) {
 									let sum = 0
-									for (let i = 0; i < arr.length; i++) {
-										if (arr[i] % 2 !== 0) {
-											sum += arr[i]
-										}
+									for (let i = 1; i < arr.length; i += 2) {
+										sum += arr[i]
 									}
 									return sum
 								}

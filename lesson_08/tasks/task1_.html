@@ -41,26 +41,26 @@
 									return sum / arr.length
 								}
 								function getCategory(arr) {
+									let isTwo = false
+									let isThree = false
+									let isFour = false
 									let cat
-									let min = arr[0]
-									for (let i = 1; i < arr.length; i++) {
-										if (arr[i] < min) {
-											min = arr[i]
+									for (let i = 0; i < arr.length; i++) {
+										if (arr[i] === 2) {
+											isTwo = true
+											break
+										}
+										if (arr[i] === 3) {
+											isThree = true
+										}
+										if (arr[i] === 4) {
+											isFour = true
 										}
 									}
-									switch (min) {
-										case 2:
-											cat = 'двійочник'
-											break
-										case 3:
-											cat = 'трійочник'
-											break
-										case 4:
-											cat = 'хорошист'
-											break
-										default: cat = 'відмінник'
-											break
-									}
+									if (isTwo) cat = 'двійочник'
+									else if (isThree) cat = 'трійочник'
+									else if (isFour) cat = 'хорошист'
+									else cat = 'відмінник'
 									return cat
 								}
 								let arrScore = [5, 2, 3, 3, 5, 5, 4, 4, 4]

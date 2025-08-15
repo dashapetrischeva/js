@@ -51,31 +51,31 @@
 								}
 								function getMaxCustomersNumber(arr) {
 									let max = -Infinity
-									let maxNum = []
+									let arrMaxNum = []
 									for (let i = 0; i < arr.length; i++) {
 										if (arr[i] > max) {
 											max = arr[i]
-											maxNum = [i + 1] // номери днів тижня з 1
+											arrMaxNum = [i + 1] // номери днів тижня з 1
 										}
 										else if (arr[i] === max) {
-											maxNum.push(i + 1)
+											arrMaxNum.push(i + 1)
 										}
 									}
-									return maxNum
+									return arrMaxNum
 								}
 								function getMinCustomersNumber(arr) {
 									let min = Infinity
-									let minNum = []
+									let arrMinNum = []
 									for (let i = 0; i < arr.length; i++) {
 										if (arr[i] < min) {
 											min = arr[i]
-											minNum = [i + 1]
+											arrMinNum = [i + 1]
 										}
 										else if (arr[i] === min) {
-											minNum.push(i + 1)
+											arrMinNum.push(i + 1)
 										}
 									}
-									return minNum
+									return arrMinNum
 								}
 								function getDaysNumbersVisitorsNumberLess20(arr) {
 									let num = []
