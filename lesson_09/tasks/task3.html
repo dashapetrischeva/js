@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 3</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 3</h1>
+					<div class="task">
+
+						<div class="task-description">
+							<p>Користувач вводить кількість елементів. Створити масив, у якому перші 5 елементів заповнені
+								1-цями, а інші до кінця масиву заповнені 7-ками.</p>
+						</div>
+						<script>
+							if (confirm('Почати тестування?')) {
+								const elementsNumber = parseInt(prompt('Введіть кількість елементів', '10'))
+								let arr = new Array(elementsNumber).fill(1, 0, 5).fill(7, 5)
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2>
+							<div>Кількість елементів: ${elementsNumber} </div>
+							<hr>
+								<div>Масив: ${arr} </div>`)
+							}
+
+
+
+
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

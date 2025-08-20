@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 8</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 8</h1>
+					<div class="task">
+
+						<h2>
+							Дано масив номерів авто. Сформувати новий масив тих, які починаються на «А»
+						</h2>
+						<script>
+
+							if (confirm('Почати тестування?')) {
+								const listCarNumbers = ['AA2457BC', 'BK9234CE', 'CA1048EP', 'KA5632HI', 'BI4789HT', 'AB9012KM', 'CB3377HE', 'AX5520KP', 'BH7421ME', 'AE6193PC']
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2>
+							<div>Масив номерів авто: ${listCarNumbers} </div>
+							<hr>
+							`)
+								let newListCarNumbers = []
+								for (const carNumber of listCarNumbers) {
+									if (carNumber[0] === 'A') {
+										newListCarNumbers.push(carNumber)
+									}
+								}
+								document.write(`
+				
+							<div>Новий масив номерів авто:<strong> ${newListCarNumbers} </strong></div>
+							`)
+							}
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

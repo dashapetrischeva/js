@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 10</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 10</h1>
+					<div class="task">
+
+						<h2>
+							Дано масив цін у грн. Податок складає 20%. Сформувати масив, який буде містити величину сплаченого
+							податку у грн.
+
+						</h2>
+						<script>
+
+							if (confirm('Почати тестування?')) {
+								const pricesGrn = [100, 340, 230, 450, 680, 500, 3000]
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2>
+							<div>Масив цін: ${pricesGrn} </div>
+							<hr>
+							`)
+								const listTaxGrn = pricesGrn.map(price => price * 0.2)
+								document.write(`
+							<div>Масив сплаченого податку:<strong> ${listTaxGrn} </strong></div>
+							`)
+							}
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

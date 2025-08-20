@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 5</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 5</h1>
+					<div class="task">
+
+						<div class="task-description">
+							<p>Дано масив елементів. Знайти добуток додатних елементів
+							</p>
+						</div>
+						<script>
+							if (confirm('Почати тестування?')) {
+								const arr = [20, 10, 9, -89, 30, -40, -50, 34, 2, -2]
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2>
+							<div>Масив: ${arr} </div>
+							<hr>
+							`)
+								let product = 1
+								for (let element of arr) {
+									if (element > 0) product *= element
+								}
+								document.write(`
+<div>Добуток додатних елементів: <strong> ${product} </strong></div>
+							`)
+							}
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
