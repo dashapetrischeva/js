@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 1</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 1</h1>
+					<div class="task">
+
+						<div class="task-description">
+							<p>Знайти суми елементів у вказаній області (зафарбована область охоплює відповідну половину рядків
+								і стовпців)</p>
+						</div>
+						<script>
+							if (confirm('Почати тестування?')) {
+								const elements = [
+									[1, 56, 78, 23],
+									[1, -56, 7, 2],
+									[1, -9, 8, 13],
+									[19, -30, 13, 23]
+								]
+								function printArr(arr) {
+									document.write('<table>')
+									for (let i = 0; i < arr.length; i++) {
+										document.write('<tr>')
+										for (let j = 0; j < arr[i].length; j++) {
+											document.write(`<td>${arr[i][j]}</td>`)
+										}
+										document.write('</tr>')
+									}
+									document.write('</table>')
+								}
+								// 1)	номери рядків від 0 до половини, стовпці від 0 до половини
+								function getFirstQuarterSum(arr) {
+									let sum = 0
+									let halfRowsNum = arr.length / 2
+									for (let row = 0; row < halfRowsNum; row++) {
+										let halfColsNum = arr[row].length / 2
+										for (let col = 0; col < halfColsNum; col++) {
+											sum += arr[row][col]
+										}
+									}
+									return sum
+								}
+								document.write(`
+							<h2 class="title-solution">Рішення:</h2>
+							<div>Масив: </div>
+						
+`)
+								printArr(elements)
+
+								document.write(`<hr>
+									<h3>1) номери рядків від 0 до половини, стовпці від 0 до половини</h3>
+							<img src="../../img/11/1.jpg" alt="Image">
+								<div><strong>Сума: ${getFirstQuarterSum(elements)} </strong></div>`)
+
+								// 2)	номери рядків від 0 до половини, стовпці від половини до кінця
+								function getSecondQuarterSum(arr) {
+									let sum = 0
+									let halfRowsNum = arr.length / 2
+									for (let row = 0; row < halfRowsNum; row++) {
+										let halfColsNum = Math.floor(arr[row].length / 2)
+										for (let col = halfColsNum; col < arr[row].length; col++) {
+											sum += arr[row][col]
+										}
+									}
+									return sum
+								}
+								document.write(`
+								<h3>2) номери рядків від 0 до половини, стовпці від половини до кінця</h3>
+							<img src="../../img/11/2.jpg" alt="Image">
+								<div><strong>Сума: ${getSecondQuarterSum(elements)} </strong></div>`)
+
+								// 3)	номери рядків (від половини до кінця, стовпці від 0 до половини
+								function getThirdQuarterSum(arr) {
+									let sum = 0
+									let halfRowsNum = Math.floor(arr.length / 2)
+									for (let row = halfRowsNum; row < arr.length; row++) {
+										let halfColsNum = arr[row].length / 2
+										for (let col = 0; col < halfColsNum; col++) {
+											sum += arr[row][col]
+										}
+									}
+									return sum
+								}
+								document.write(`
+								<h3>3)	номери рядків (від половини до кінця, стовпці від 0 до половини</h3>
+							<img src="../../img/11/3.jpg" alt="Image">
+								<div><strong>Сума: ${getThirdQuarterSum(elements)} </strong></div>`)
+
+								//  4) номери рядків від половини до кінця, стовпці від половини до кінця
+								function getFourthQuarterSum(arr) {
+									let sum = 0
+									let halfRowsNum = Math.floor(arr.length / 2)
+									for (let row = halfRowsNum; row < arr.length; row++) {
+										let halfColsNum = Math.floor(arr[row].length / 2)
+										for (let col = halfColsNum; col < arr[row].length; col++) {
+											sum += arr[row][col]
+										}
+									}
+									return sum
+								}
+								document.write(`
+								<h3> 4) номери рядків від половини до кінця, стовпці від половини до кінця</h3>
+										<img src="../../img/11/4.jpg" alt="Image">
+								<div><strong>Сума: ${getFourthQuarterSum(elements)} </strong></div>`)
+								//5) Суму парних рядків
+								function getEvenRowsSum(arr) {
+									let sum = 0
+
+									for (let row = 1; row < arr.length; row += 2) {
+										for (let col of arr[row]) {
+											sum += col
+										}
+									}
+									return sum
+								}
+								document.write(`
+								<h3> 5) Суму парних рядків</h3>
+								<div><strong>Сума: ${getEvenRowsSum(elements)} </strong></div>`)
+
+								// 6) Суму непарних стовпців
+								function getOddColsSum(arr) {
+									let sum = 0
+
+									for (let row of arr) {
+										for (let col = 0; col < row.length; col += 2) {
+											sum += row[col]
+										}
+									}
+									return sum
+								}
+								document.write(`
+								<h3> 6) Суму непарних стовпців</h3>
+								<div><strong>Сума: ${getOddColsSum(elements)} </strong></div>`)
+								// 7) У парних рядках – непарні стовпці, у непарних – парні.
+
+
+								// 7) У парних рядках – непарні стовпці, у непарних – парні.
+								function getOddEvenEvenOddSum(arr) {
+									let sum = 0
+
+									for (let row = 1; row < arr.length; row += 2) {
+										for (let col = 0; col < arr[row].length; col += 2) {
+											sum += arr[row][col]
+										}
+									}
+									for (let row = 0; row < arr.length; row += 2) {
+										for (let col = 1; col < arr[row].length; col += 2) {
+											sum += arr[row][col]
+										}
+									}
+									return sum
+								}
+								document.write(`
+								<h3>7) У парних рядках – непарні стовпці, у непарних – парні.</h3>
+								<div><strong>Сума: ${getOddEvenEvenOddSum(elements)} </strong></div>`)
+							}
+
+
+
+
+
+
+
+
+
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

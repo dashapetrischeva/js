@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 3</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 3</h1>
+					<div class="task">
+
+						<div class="task-description">
+							<p>Морський бій. Випадковим чином на двовимірному полі розміром 6*6 розташовується 5 кораблів. Користувач стріляє вказуючи координати. Гра продовжується поки не потоплено усі кораблі або у користувача не закінчаться снаряди.</p>
+						</div>
+						<script>
+							if (confirm('Почати тестування?')) {
+								document.write(`<h2 class="title-solution">Рішення:</h2>`)
+								let shellsNumber = parseInt(prompt(`Введіть кількість снарядів`, '20'))
+								let ships = []
+								const fieldSize = 6
+								const max = 6
+								const min = 1
+								// формуємо кораблі
+										 while (ships.length < 5) {
+											let x = Math.floor(Math.random() * (max - min + 1)) + min
+											let y = Math.floor(Math.random() * (max - min + 1)) + min
+										// перевіряємо чи зайняте це місце
+											let busy = ships.some(ship => ship[0] === x && ship[1] === y)
+											if (!busy) ships.push([x, y])
+										}
+								 let userShipX
+								 let userShipY
+								 while ((shellsNumber > 0) && (ships.length > 0)) {
+								 	userShipX = parseInt(prompt(`Введіть координату X (1 - ${fieldSize})`))
+								 	userShipY = parseInt(prompt(`Введіть координату Y (1 - ${fieldSize})`))
+								 	shellsNumber--
+									let hit = false
+								for(let ship=0; ship<ships.length; ship++)
+								{
+									if (ships[ship][0] === userShipX && ships[ship][1] === userShipY){
+										ships.splice(ship,1)
+										hit=true
+										break
+									}
+									
+								}
+								
+								if (hit){
+										if(ships.length>0){
+										alert(`Вітаю! Ти влучив. У тебе залишилось ${ships.length} кораблів та ${shellsNumber} спроб. `)
+										}
+										else{
+											alert(`Вітаю! Ти потопив всі кораблі. `)
+										}
+									}
+									else if (shellsNumber > 0) {
+																		alert(`Не влучив. У тебе залишилось ${shellsNumber} спроб. `)
+																	} else {
+																		document.write(`Снаряди закінчились! Кораблі, що залишились: (${JSON.stringify(ships)})`)
+																	}
+								 }
+							}
+
+
+
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
