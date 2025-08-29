@@ -27,7 +27,9 @@
 					<div class="task">
 
 						<div class="task-description">
-							<p>Морський бій. Випадковим чином на двовимірному полі розміром 6*6 розташовується 5 кораблів. Користувач стріляє вказуючи координати. Гра продовжується поки не потоплено усі кораблі або у користувача не закінчаться снаряди.</p>
+							<p>Морський бій. Випадковим чином на двовимірному полі розміром 6*6 розташовується 5 кораблів.
+								Користувач стріляє вказуючи координати. Гра продовжується поки не потоплено усі кораблі або у
+								користувача не закінчаться снаряди.</p>
 						</div>
 						<script>
 							if (confirm('Почати тестування?')) {
@@ -38,44 +40,55 @@
 								const max = 6
 								const min = 1
 								// формуємо кораблі
-										 while (ships.length < 5) {
-											let x = Math.floor(Math.random() * (max - min + 1)) + min
-											let y = Math.floor(Math.random() * (max - min + 1)) + min
-										// перевіряємо чи зайняте це місце
-											let busy = ships.some(ship => ship[0] === x && ship[1] === y)
-											if (!busy) ships.push([x, y])
-										}
-								 let userShipX
-								 let userShipY
-								 while ((shellsNumber > 0) && (ships.length > 0)) {
-								 	userShipX = parseInt(prompt(`Введіть координату X (1 - ${fieldSize})`))
-								 	userShipY = parseInt(prompt(`Введіть координату Y (1 - ${fieldSize})`))
-								 	shellsNumber--
-									let hit = false
-								for(let ship=0; ship<ships.length; ship++)
-								{
-									if (ships[ship][0] === userShipX && ships[ship][1] === userShipY){
-										ships.splice(ship,1)
-										hit=true
-										break
-									}
-									
+								while (ships.length < 5) {
+									let x = Math.floor(Math.random() * (max - min + 1)) + min
+									let y = Math.floor(Math.random() * (max - min + 1)) + min
+									// перевіряємо чи зайняте це місце
+									let busy = ships.some(ship => ship[0] === x && ship[1] === y)
+									if (!busy) ships.push([x, y])
 								}
-								
-								if (hit){
-										if(ships.length>0){
-										alert(`Вітаю! Ти влучив. У тебе залишилось ${ships.length} кораблів та ${shellsNumber} спроб. `)
+								let userShipX
+								let userShipY
+
+								function printArr(arr) {
+									let rez = ''
+									for (let i = 0; i < arr.length; i++) {
+										rez += "[" + arr[i][0] + "," + arr[i][1] + "]";
+									}
+									return rez
+								}
+
+
+
+
+								while ((shellsNumber > 0) && (ships.length > 0)) {
+									userShipX = parseInt(prompt(`Введіть координату X (1 - ${fieldSize})`))
+									userShipY = parseInt(prompt(`Введіть координату Y (1 - ${fieldSize})`))
+									shellsNumber--
+									let hit = false
+									for (let ship = 0; ship < ships.length; ship++) {
+										if (ships[ship][0] === userShipX && ships[ship][1] === userShipY) {
+											ships.splice(ship, 1)
+											hit = true
+											break
 										}
-										else{
+
+									}
+
+									if (hit) {
+										if (ships.length > 0) {
+											alert(`Вітаю! Ти влучив. У тебе залишилось ${ships.length} кораблів та ${shellsNumber} спроб. `)
+										}
+										else {
 											alert(`Вітаю! Ти потопив всі кораблі. `)
 										}
 									}
 									else if (shellsNumber > 0) {
-																		alert(`Не влучив. У тебе залишилось ${shellsNumber} спроб. `)
-																	} else {
-																		document.write(`Снаряди закінчились! Кораблі, що залишились: (${JSON.stringify(ships)})`)
-																	}
-								 }
+										alert(`Не влучив. У тебе залишилось ${shellsNumber} спроб. `)
+									} else {
+										document.write(`Снаряди закінчились! Кораблі, що залишились: (${printArr(ships)})`)
+									}
+								}
 							}
 
 
