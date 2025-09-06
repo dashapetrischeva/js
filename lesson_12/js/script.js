@@ -227,13 +227,15 @@ if (confirm('Почати тестування?')) {
             return -1;
     }
     let indexName = binarySearch(sortedNames, 'Olga', 0, sortedNames.length - 1);
+    document.write(`<hr>
+								<h2 class="title-solution">Рішення:</h2>`);
     if (indexName === -1) {
         document.write(`<div>Такого імені у масиві немає</div>`);
     }
     else {
         document.write(`<div>Ім’я «Olga» у масиві під номером ${indexName}</div>`);
     }
-    document.write(`<h2>Задача 6. Застосовуючи відповідне сортування та бінарний пошук визначити, чи є у масиві ім’я довжиною 5 символів і під яким індексом.
+    document.write(`<br><h2>Задача 6. Застосовуючи відповідне сортування та бінарний пошук визначити, чи є у масиві ім’я довжиною 5 символів і під яким індексом.
 </h2>`);
     function sortStringBubbleByLength(arr) {
         let changed;
@@ -275,13 +277,15 @@ if (confirm('Почати тестування?')) {
             return -1;
     }
     indexName = binarySearchNameLength(sortedNamesByLength, 5, 0, sortedNames.length - 1);
+    document.write(`<hr>
+								<h2 class="title-solution">Рішення:</h2>`);
     if (indexName === -1) {
         document.write(`<div>Ім’я довжиною 5 символів у масиві немає</div>`);
     }
     else {
         document.write(`<div>Ім’я довжиною 5 символів ${sortedNamesByLength[indexName]} у масиві під номером ${indexName}</div>`);
     }
-    document.write(`<h2>Задача 7. Сформувати двовимірний масив (4*8) з номерами днів (описати окремий тип для днів). Заповнити його випадковим чином. Підрахувати для кожного рядка кількість неділь.
+    document.write(`<br><h2>Задача 7. Сформувати двовимірний масив (4*8) з номерами днів (описати окремий тип для днів). Заповнити його випадковим чином. Підрахувати для кожного рядка кількість неділь.
 </h2>`);
     /**
      *
