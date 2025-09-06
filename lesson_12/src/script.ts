@@ -248,12 +248,17 @@ if (confirm('Почати тестування?')) {
     if (start <= end) {
       const middle: number = Math.floor((start + end) / 2)
       if (arr[middle] === searchElement) return middle
-      if (arr[middle] < searchElement)
+      else if (arr[middle] < searchElement)
         return binarySearch(arr, searchElement, middle + 1, end)
-      if (arr[middle] > searchElement)
+      else
         return binarySearch(arr, searchElement, start, middle - 1)
     } else return -1
   }
+
+
+
+
+
   let indexName = binarySearch(sortedNames, 'Olga', 0, sortedNames.length - 1)
   document.write(`<hr>
 								<h2 class="title-solution">Рішення:</h2>`)
@@ -298,9 +303,9 @@ if (confirm('Почати тестування?')) {
     if (start <= end) {
       const middle: number = Math.floor((start + end) / 2)
       if (arr[middle].length === nameLength) return middle
-      if (arr[middle].length < nameLength)
+      else if (arr[middle].length < nameLength)
         return binarySearchNameLength(arr, nameLength, middle + 1, end)
-      if (arr[middle].length > nameLength)
+      else
         return binarySearchNameLength(arr, nameLength, start, middle - 1)
     } else return -1
   }

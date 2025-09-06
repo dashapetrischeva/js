@@ -218,9 +218,9 @@ if (confirm('Почати тестування?')) {
             const middle = Math.floor((start + end) / 2);
             if (arr[middle] === searchElement)
                 return middle;
-            if (arr[middle] < searchElement)
+            else if (arr[middle] < searchElement)
                 return binarySearch(arr, searchElement, middle + 1, end);
-            if (arr[middle] > searchElement)
+            else
                 return binarySearch(arr, searchElement, start, middle - 1);
         }
         else
@@ -268,9 +268,9 @@ if (confirm('Почати тестування?')) {
             const middle = Math.floor((start + end) / 2);
             if (arr[middle].length === nameLength)
                 return middle;
-            if (arr[middle].length < nameLength)
+            else if (arr[middle].length < nameLength)
                 return binarySearchNameLength(arr, nameLength, middle + 1, end);
-            if (arr[middle].length > nameLength)
+            else
                 return binarySearchNameLength(arr, nameLength, start, middle - 1);
         }
         else
