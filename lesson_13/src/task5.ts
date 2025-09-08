@@ -1,6 +1,11 @@
 if (confirm('Почати тестування?')) {
 	document.write(`<h2 class="title-solution">Рішення:</h2>`)
-
+	/**
+	 * Замикання
+	 * @param{number} min мінімальне значення
+	 * @param{number} max максимальне значення
+	 * @returns{() => number} функція, яка повертає наступне число 
+	 */
 	function createIterator(min: number, max: number) {
 		let current = min - 1
 
