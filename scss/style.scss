@@ -125,7 +125,7 @@ line-height: 150%;
 	line-height: 150%;
 }
 table{
-	max-width:31.25rem;
+	max-width:auto;
 	border-collapse: collapse;
 	tr{
 		th{
@@ -140,6 +140,26 @@ table{
 	}
 }
 
+.task15{
+	max-width:auto;
+	border-collapse: collapse;
+	tr{
+		th{
+			border: 2px solid #f0858b;
+			padding: 0.625rem 1.25rem;
+			font-size: 1rem;
+			line-height: 150%;
+			font-weight: 700;
+		}
+		td{
+			border: 2px solid #f0858b;
+			padding: 0.625rem 1.25rem;
+         font-size: 1rem;
+			line-height: 150%;
+			font-weight: 400;      
+		}
+	}
+}
 .task{
 	  background: #fff;
   border-radius: 12px;

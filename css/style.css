@@ -165,7 +165,7 @@ body {
 }
 
 table {
-  max-width: 31.25rem;
+  max-width: auto;
   border-collapse: collapse;
 }
 table tr th {
@@ -175,6 +175,25 @@ table tr th {
 table tr td {
   border: 2px solid #f0858b;
   padding: 0.625rem 1.25rem;
+}
+
+.task15 {
+  max-width: auto;
+  border-collapse: collapse;
+}
+.task15 tr th {
+  border: 2px solid #f0858b;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 700;
+}
+.task15 tr td {
+  border: 2px solid #f0858b;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 400;
 }
 
 .task {
