@@ -14,12 +14,13 @@ if (confirm('Почати тестування?')) {
 			this.secondNumber = 0
 			this.userAnswer = 0
 		}
-		// Генерування прикладу (метод випадковим чином визначає друге число, перше число фіксоване)
+
 		getRandomSecondNumber() {
 			const min = 1
 			const max = 10
 			this.secondNumber = Math.floor(Math.random() * (max - min + 1)) + min
 		}
+		// Генерування прикладу (метод випадковим чином визначає друге число, перше число фіксоване)
 		exampleGeneration() {
 			this.getRandomSecondNumber()
 			return `${this.testedNumber} * ${this.secondNumber} =`
