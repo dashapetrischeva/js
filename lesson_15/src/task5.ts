@@ -1,6 +1,6 @@
 if (confirm('Почати тестування?')) {
 
-	class danceManager {
+	class DanceManager {
 		boysNames: string[]
 		girlsNames: string[]
 		constructor(initBoysNames: string[], initGirlsNames: string[]) {
@@ -28,7 +28,7 @@ if (confirm('Почати тестування?')) {
 	}
 	const boys = ['Іван', 'Петро', 'Олександр']
 	const girls = ['Ольга', 'Ірина', 'Катерина', 'Наталья']
-	const Ivan = new danceManager(boys, girls)
+	const Ivan = new DanceManager(boys, girls)
 	Ivan.run()
 
 }

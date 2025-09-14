@@ -15,37 +15,49 @@ if (confirm('Почати тестування?')) {
 			this.userAnswer = 0
 		}
 		// Генерування прикладу (метод випадковим чином визначає друге число, перше число фіксоване)
-		exampleGeneration() {
+		getRandomSecondNumber() {
 			const min = 1
 			const max = 10
 			this.secondNumber = Math.floor(Math.random() * (max - min + 1)) + min
+		}
+		exampleGeneration() {
+			this.getRandomSecondNumber()
 			return `${this.testedNumber} * ${this.secondNumber} =`
+		}
+		increaseCorrectAnswersNumber() {
+			this.correctAnswersNumber++
+		}
+		increaseIncorrectAnswersNumber() {
+			this.incorrectAnswersNumber++
 		}
 		//Перевірка правильності вказаної відповіді
 		checkAnswer() {
-
 			this.userAnswer = Number(prompt(this.exampleGeneration()))
 			if (this.userAnswer === (this.testedNumber * this.secondNumber)) {
-				this.correctAnswersNumber++
+				this.increaseCorrectAnswersNumber()
 				return true
 			}
 			else {
-				this.incorrectAnswersNumber++
+				this.increaseIncorrectAnswersNumber()
 				return false
+			}
+		}
+		showTest() {
+			const isCorrect = this.checkAnswer()
+			document.write(`<div><strong> ${this.testedNumber} * ${this.secondNumber} </strong></div>`)
+			document.write(`<div>Ваша відповідь: <strong>${this.userAnswer}</strong></div>`)
+			if (isCorrect) {
+				document.write(`<div>Ваша відповідь вірна!</div><br>`)
+			}
+			else {
+				document.write(`<div>Ваша відповідь не вірна! Правильна: ${this.testedNumber * this.secondNumber}</div><br>`)
 			}
 		}
 		//render - виведення інформації про тестування на екран
 		render(num: number) {
 			for (let i = 0; i < num; i++) {
-				const isCorrect = this.checkAnswer()
-				document.write(`<div><strong>Приклад ${i + 1}: ${this.testedNumber} * ${this.secondNumber} </strong></div>`)
-				document.write(`<div>Ваша відповідь: ${this.userAnswer}</div>`)
-				if (isCorrect) {
-					document.write(`<div>Ваша відповідь вірна!</div><br>`)
-				}
-				else {
-					document.write(`<div>Ваша відповідь не вірна! Правильна: ${this.testedNumber * this.secondNumber}</div><br>`)
-				}
+				document.write(`<div><strong>Приклад: ${i + 1}:</strong></div>`)
+				this.showTest()
 			}
 			document.write(`<hr><div>Правильних: <strong>${this.correctAnswersNumber}</strong></div>`)
 			document.write(`<div>Неправильних: <strong>${this.incorrectAnswersNumber}</strong></div>`)

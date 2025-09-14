@@ -1,6 +1,6 @@
 "use strict";
 if (confirm('Почати тестування?')) {
-    class danceManager {
+    class DanceManager {
         constructor(initBoysNames, initGirlsNames) {
             this.boysNames = initBoysNames;
             this.girlsNames = initGirlsNames;
@@ -26,6 +26,6 @@ if (confirm('Почати тестування?')) {
     }
     const boys = ['Іван', 'Петро', 'Олександр'];
     const girls = ['Ольга', 'Ірина', 'Катерина', 'Наталья'];
-    const Ivan = new danceManager(boys, girls);
+    const Ivan = new DanceManager(boys, girls);
     Ivan.run();
 }
