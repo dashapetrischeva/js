@@ -5,10 +5,10 @@ if (confirm('Почати тестування?')) {
 		private _dollarExchangeRate: number = 0
 		private _amountDollars: number = 0
 
-		constructor(initAmountHryvnias: number, initDollarExchangeRate: number) {
-			if (initAmountHryvnias < 0) throw new Error('Amount in hryvnias is incorrect!')
+		constructor(initAmountUAH: number, initDollarExchangeRate: number) {
+			if (initAmountUAH < 0) throw new Error('Amount in hryvnias is incorrect!')
 			this.DollarExchangeRate = initDollarExchangeRate
-			this.AmountDollars = this.exchange(initAmountHryvnias)
+			this.AmountDollars = this.exchange(initAmountUAH)
 		}
 		public get AmountDollars(): number {
 			return this._amountDollars

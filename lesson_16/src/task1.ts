@@ -31,11 +31,9 @@ if (confirm('Почати тестування?')) {
 				const abs = Math.abs(n)
 				d = 30 - (abs % 30)
 				this.subtractMonths(Math.floor((abs + this.Day) / 30))
-
 			} else {
 				d = n
 			}
-
 			return d
 		}
 		addDays(n: number) {

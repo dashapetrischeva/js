@@ -2,13 +2,13 @@
 if (confirm('Почати тестування?')) {
     document.write(`<h2 class="title-solution">Рішення:</h2>`);
     class TMoney {
-        constructor(initAmountHryvnias, initDollarExchangeRate) {
+        constructor(initAmountUAH, initDollarExchangeRate) {
             this._dollarExchangeRate = 0;
             this._amountDollars = 0;
-            if (initAmountHryvnias < 0)
+            if (initAmountUAH < 0)
                 throw new Error('Amount in hryvnias is incorrect!');
             this.DollarExchangeRate = initDollarExchangeRate;
-            this.AmountDollars = this.exchange(initAmountHryvnias);
+            this.AmountDollars = this.exchange(initAmountUAH);
         }
         get AmountDollars() {
             return this._amountDollars;
