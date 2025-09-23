@@ -266,3 +266,92 @@ div{
 	overflow-y: auto;
 	margin-bottom:20px; 
 }
+.page#page18 {
+  img { 
+    max-width: 28.125rem;
+  }
+}
+
+.form {
+	max-width:50%;
+margin-top:40px;
+		&__field {
+			margin-bottom:20px;
+		}
+
+		&__buttons {
+			padding-bottom:20px;
+			border-bottom:1px solid #f0858b;
+			button{
+				background: #f0858b;
+				color: #fff;
+				padding: 7px 15px;
+				border-radius: 8px;
+				text-decoration: none;
+				font-size: 14px;
+				transition: background 0.3s;
+				margin-right:10px;
+				text-transform: uppercase;
+&:hover {
+        background: #d96e76;
+      }
+			}
+		}
+}
+.field {
+
+		&__label {
+			line-height: 150%;
+			margin-right:10px;
+		}
+
+		&__input {
+			line-height: 150%;
+			outline: 1px solid #333;
+			font-size: 16px;
+			border-radius:5px;
+			padding-inline:10px;
+			color:#333;
+		}
+}
+.result {
+
+padding-top:20px;
+		&__label {
+			line-height: 150%;
+			margin-right:10px;
+		}
+
+		&__input {
+			line-height: 150%;
+			outline: 1px solid #333;
+			font-size: 16px;
+			border-radius:5px;
+			padding-inline:10px;
+			color:#333;
+		}
+}
+
+.result-convert {
+margin-bottom: 0;
+padding-top:20px;
+		&__label {
+			line-height: 150%;
+			margin-right:10px;
+		}
+
+		&__input {
+			line-height: 150%;
+			outline: 1px solid #333;
+			font-size: 16px;
+			border-radius:5px;
+			padding-inline:10px;
+			color:#333;
+		}
+}
+.task__description{
+	.title{
+		font-size: 21px;
+		font-weight:700;
+	}
+}
