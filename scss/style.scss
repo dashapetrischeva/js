@@ -350,8 +350,72 @@ padding-top:20px;
 		}
 }
 .task__description{
+	margin-bottom:20px;
 	.title{
 		font-size: 21px;
 		font-weight:700;
 	}
+}
+.error{
+	color:#db020d;
+	font-size: 12px;
+}
+
+.task__solution{
+	
+}
+
+.athletes-lists {
+display:flex;
+padding-top:20px; 
+gap:20px;
+		&__general {
+width:280px;	
+		
+		}
+
+		&__selected {
+	width:280px;	
+	
+		}
+		&__item {
+			padding:5px;
+			border:2px solid #d96e76;
+			margin-bottom:10px;
+			display:flex;
+			gap:10px;
+			justify-content:space-between;
+  			cursor: pointer;
+
+		}
+		&__title{
+			font-weight: 700;
+			text-align: center;
+		}
+		&__list{
+			border:2px solid #d96e76;
+			padding:10px;
+			height:350px;
+		}
+
+}
+.athletes-lists__selected .athletes-lists__item{
+	&::after{
+		content:'';
+		background-image: url('../img/red-arrow.png');
+		width:32px;
+		height:32px;
+	}
+}
+
+.athletes-lists__general .athletes-lists__item{
+	&::after{
+		content:'';
+		background-image: url('../img/green-arrow.png');
+		width:32px;
+		height:32px;
+	}
+}
+.hello{
+	width:auto;
 }
