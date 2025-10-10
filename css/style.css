@@ -444,3 +444,55 @@ div {
   position: fixed;
   transition: all 0.5s linear;
 }
+
+.task .mb {
+  margin-bottom: 20px;
+}
+
+.form-check {
+  padding-top: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+.form-check .field__label {
+  width: 200px;
+}
+.form-check .form__field {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.form-check .form__buttons {
+  text-align: center;
+  border: none;
+}
+.form-check .error {
+  position: absolute;
+  bottom: 0;
+}
+
+.task--regular-expressions div {
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+.task--regular-expressions .title-solution {
+  padding-top: 20px;
+}
+
+.changeColorCount {
+  font-weight: 700;
+}
+
+.task--collection div {
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+.task--collection .title-solution {
+  padding-top: 20px;
+}
+.task--collection p {
+  margin-bottom: 10px;
+}
