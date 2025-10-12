@@ -478,3 +478,26 @@ border:none;
 		margin-bottom:10px;
 	}
 }
+
+.form--add-task{
+		padding-top:20px;
+width:50%;
+margin:0 auto;
+.field__label{
+	width:200px; 
+}
+.form__field{
+	display:flex;
+	gap:20px;
+	position:relative;
+	padding-bottom:10px;
+}
+.form__buttons{
+text-align:center;
+border:none; 
+}
+.error{
+	position:absolute;
+	bottom:0;
+}
+}

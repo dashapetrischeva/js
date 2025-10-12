@@ -496,3 +496,26 @@ div {
 .task--collection p {
   margin-bottom: 10px;
 }
+
+.form--add-task {
+  padding-top: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+.form--add-task .field__label {
+  width: 200px;
+}
+.form--add-task .form__field {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.form--add-task .form__buttons {
+  text-align: center;
+  border: none;
+}
+.form--add-task .error {
+  position: absolute;
+  bottom: 0;
+}

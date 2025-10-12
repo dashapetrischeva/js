@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<title>Задача 19</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="../index.html" class="header__logo">
+					Dasha Petrischeva
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="article">
+				<div class="article__container">
+					<h1>Задача 19</h1>
+					<div class="task">
+
+						<div class="task__description">
+							<p class="mb">Зберігати у пам’яті список справ, які користувачу треба виконати (зберігати у
+								localStorage). Періодично випадковим чином вибирати якусь з справ і виводити користувачу (з
+								використанням confirm). Якщо користувач натискає на «Ок», то видаляти цю задачу.</p>
+
+						</div>
+						<h2>Додавання завдання</h2>
+						<form action="#" method="GET" class="form form--add-task">
+							<div class="form__field field">
+								<label for="title" class="field__label">Назва завдання:</label>
+								<input id="title" type="text" class="field__input">
+							</div>
+							<div class="form__field field">
+								<label for="priority" class="field__label">Пріоритет:</label>
+								<input id="priority" type="number" class="field__input">
+							</div>
+							<div class="form__buttons">
+								<button type="button" class="addTask">Додати</button>
+							</div>
+
+						</form>
+						<h2>Список завдань</h2>
+						<ul class="todo-list"></ul>
+
+
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				© 2025 Dasha Petrischeva
+			</div>
+		</footer>
+	</div>
+	<script src="../js/script3.js"></script>
+</body>
+
+</html>
