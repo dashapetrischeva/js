@@ -519,3 +519,15 @@ div {
   position: absolute;
   bottom: 0;
 }
+
+.task--date div {
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+.task--date .title-solution {
+  padding-top: 20px;
+}
+.task--date p {
+  margin-bottom: 10px;
+}
