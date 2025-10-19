@@ -66,7 +66,7 @@ if (confirm('Почати тестування?')) {
 			const markup = new Markup(data)
 			item.append(markup.showHeader('Рандомний котик', 'Новий котик'))
 			item.append(markup.showContent())
-			document.querySelector('.item__link').onclick = () => initRandom()
+			document.querySelector('.item__link').onclick = initRandom
 		} catch {
 			item.innerText = 'Не вдалося завантажити котика'
 		}
