@@ -515,7 +515,37 @@ border:none;
 		margin-bottom:10px; 
 	}
 }
-
+.item__content{
+	text-align:center; 
+	img{
+max-width:400px;
+max-height:600px;
+	}
+}
+.task--cats{
+	h3{
+		 text-transform: uppercase;
+		 font-weight:700;
+	}
+}
+.list-items__content{
+	display:flex;
+	flex-wrap:wrap;
+	gap:5px;
+	.list-items__item{
+		width:184px;
+		height:184px;
+    position: relative;
+	 overflow: hidden; 
+	border-radius: 8px;
+img{
+   width: 100%;
+	height: 100%;
+	object-fit: cover; 
+	display: block;
+}
+	}
+}
 
 
 
