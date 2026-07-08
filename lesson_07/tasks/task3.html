@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 3</title>
+	<title>Task 3</title>
 </head>
 
 
@@ -23,18 +23,18 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 3</h1>
+					<h1>Task 3</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Створити окремі функції, які переводять:</p>
-							<p>1) Сантиметри у дюйми;</p>
-							<p>2) Кілограми у фунти;</p>
-							<p>3) Кілометри у милі.</p>
+							<p>Create separate functions that convert:</p>
+							<p>1) Centimeters to inches;</p>
+							<p>2) Kilograms to pounds;</p>
+							<p>3) Kilometers to miles.</p>
 
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								function cmToInches(cm) {
 									return cm / 2.54
 								}
@@ -45,14 +45,14 @@
 									return km / 1.609
 
 								}
-								const cmNumber = parseFloat(prompt(`Введіть кількість сантиметрів`, '345'))
-								const kgNumber = parseFloat(prompt(`Введіть кількість кілограм`, '15'))
-								const kmNumber = parseFloat(prompt(`Введіть кілометрів`, '250'))
+								const cmNumber = parseFloat(prompt(`Enter the number of centimeters`, '345'))
+								const kgNumber = parseFloat(prompt(`Enter the number of kilograms`, '15'))
+								const kmNumber = parseFloat(prompt(`Enter the number of kilometers`, '250'))
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<p> ${cmNumber} см = ${cmToInches(cmNumber).toFixed(2)} дюймів </p>
-							<p> ${kgNumber} кг = ${kgToPounds(kgNumber).toFixed(2)} фунтів </p>
-							<p> ${kmNumber} км = ${kmToMiles(kmNumber).toFixed(2)} миль </p>
+							<h2 class="title-solution">Solution:</h2>
+							<p> ${cmNumber} cm = ${cmToInches(cmNumber).toFixed(2)} inches </p>
+							<p> ${kgNumber} kg = ${kgToPounds(kgNumber).toFixed(2)} pounds </p>
+							<p> ${kmNumber} km = ${kmToMiles(kmNumber).toFixed(2)} miles </p>
 							`)
 							}
 

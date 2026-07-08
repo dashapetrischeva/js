@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 2</title>
+	<title>Task 2</title>
 </head>
 
 
@@ -23,19 +23,19 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 2</h1>
+					<h1>Task 2</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Створити окремі функції, які для 4 чисел знаходять:</p>
+							<p>Create separate functions that calculate the following for four numbers:</p>
 
-							<p>1) суму;</p>
-							<p>2) добуток;</p>
-							<p>3) середнє арифметичне;</p>
-							<p>4) мінімальне значення.</p>
+							<p>1) The sum;</p>
+							<p>2) The product;</p>
+							<p>3) The arithmetic mean;</p>
+							<p>4) The minimum value.</p>
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								function getSum(num1, num2, num3, num4) {
 									return num1 + num2 + num3 + num4
 								}
@@ -52,17 +52,17 @@
 									if (num4 < min) min = num4
 									return min
 								}
-								const num1 = parseFloat(prompt(`Введіть перше число`, '5'))
-								const num2 = parseFloat(prompt(`Введіть друге число`, '5'))
-								const num3 = parseFloat(prompt(`Введіть третє число`, '5'))
-								const num4 = parseFloat(prompt(`Введіть четверте число`, '5'))
+								const num1 = parseFloat(prompt(`Enter the first number`, '5'))
+								const num2 = parseFloat(prompt(`Enter the second number`, '5'))
+								const num3 = parseFloat(prompt(`Enter the third number`, '5'))
+								const num4 = parseFloat(prompt(`Enter the fourth number`, '5'))
 
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<p><strong>Сума </strong>= ${getSum(num1, num2, num3, num4)}</p>
-							<p> <strong>Добуток</strong> = ${getProduct(num1, num2, num3, num4)}</p>
-							<p> <strong>Середнє арифметичне</strong> = ${getArithmeticMean(num1, num2, num3, num4)}</p>
-							<p> <strong>Мінімальне значення</strong> = ${getMin(num1, num2, num3, num4)}</p>
+							<h2 class="title-solution">Solution:</h2>
+							<p><strong>Sum </strong>= ${getSum(num1, num2, num3, num4)}</p>
+							<p> <strong>Product</strong> = ${getProduct(num1, num2, num3, num4)}</p>
+							<p> <strong>Arithmetic Mean</strong> = ${getArithmeticMean(num1, num2, num3, num4)}</p>
+							<p> <strong>Minimum Value</strong> = ${getMin(num1, num2, num3, num4)}</p>
 							`)
 							}
 						</script>

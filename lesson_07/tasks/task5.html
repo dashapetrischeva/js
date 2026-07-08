@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 5</title>
+	<title>Task 5</title>
 </head>
 
 
@@ -23,16 +23,16 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 5</h1>
+					<h1>Task 5</h1>
 					<div class="task">
 
 						<h2>
-							Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень (шляхи до зображень
-							передаються у функцію)
+							Create a function that displays a random image on the screen from a set of 4 images (image paths
+							are passed to the function)
 						</h2>
 						<script>
 
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								function displayRandomImage(path1, path2, path3, path4) {
 									const minNum = 1
 									const maxNum = 4
@@ -55,7 +55,7 @@
 									}
 									return `<p><img src="${imagePath}"></p>`
 								}
-								document.write(`<h2 class="title-solution">Рішення:</h2>`)
+								document.write(`<h2 class="title-solution">Solution:</h2>`)
 								document.write(displayRandomImage("../../img/7/1.jpg", "../../img/7/2.jpg", "../../img/7/3.jpg", "../../img/7/4.jpg"))
 							}
 						</script>

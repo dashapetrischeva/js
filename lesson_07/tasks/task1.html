@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 1</title>
+	<title>Task 1</title>
 </head>
 
 
@@ -23,14 +23,15 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 1</h1>
+					<h1>Task 1</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</p>
+							<p>Create a function that allows you to determine whether a day is a working day based on its
+								number.</p>
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								function isWorkingDay(dayNum) {
 									let answer
 									switch (dayNum) {
@@ -39,22 +40,22 @@
 										case 3:
 										case 4:
 										case 5:
-											answer = 'Так, це робочий день.'
+											answer = 'Yes, this is a working day.'
 											break
 										case 6:
 										case 7:
-											answer = 'Ні, це вихідний день.'
+											answer = 'No, this is a weekend day.'
 											break
 										default:
-											answer = 'Некоректні дані.'
+											answer = 'Invalid data.'
 											break
-										// throw new Error('Некоректні дані.')
+										// throw new Error('Invalid data.')
 									}
 									return answer
 								}
-								const userDayNum = parseInt(prompt(`Введіть номер дня тижня (1-7)`, '5'))
+								const userDayNum = parseInt(prompt(`Enter the day number of the week (1-7)`, '5'))
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2><div>
+							<h2 class="title-solution">Solution:</h2><div>
 							${isWorkingDay(userDayNum)}</div>`)
 
 							}

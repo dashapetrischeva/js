@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 4</title>
+	<title>Task 4</title>
 </head>
 
 
@@ -23,17 +23,17 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 4</h1>
+					<h1>Task 4</h1>
 					<div class="task">
 
 						<h2>
-							Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця
-							заповнюється заданим фіксованим повідомленням).
+							Create a function that creates a table with a specified number of rows and columns (the table
+							is filled with a given fixed message).
 						</h2>
 						<script>
-							if (confirm('Почати тестування?')) {
-								let rowsNumber = parseInt(prompt(`Введіть кількість рядків`, '5'))
-								let columnsNumber = parseInt(prompt(`Введіть кількість стовпців`, '5'))
+							if (confirm('Start testing?')) {
+								let rowsNumber = parseInt(prompt(`Enter the number of rows`, '5'))
+								let columnsNumber = parseInt(prompt(`Enter the number of columns`, '5'))
 								function createTable(n, m) {
 									const message = 'JavaScript'
 									let table
@@ -49,7 +49,7 @@
 									document.write(table)
 								}
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>`)
+							<h2 class="title-solution">Solution:</h2>`)
 								createTable(rowsNumber, columnsNumber)
 							}
 						</script>
