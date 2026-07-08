@@ -1,11 +1,11 @@
 
-if (confirm('Почати тестування?')) {
-  document.write("<h2> Дано масив 30 випадкових цілих чисел. </h2>")
-  // Задача 1. Дано масив 30 випадкових цілих чисел. Підрахувати скільки було обмінів під час сортування бульбашкою
+if (confirm('Start testing?')) {
+  document.write("<h2> Given an array of 30 random integers. </h2>")
+  // Task 1. Given an array of 30 random integers. Count the number of exchanges during bubble sort
   let arrRandom: number[] = [63, -72, -94, 89, -30, -38, -43, -65, 88, -74, 73, 89, 39, -78, 51, 8, -92, -93, -77, -45, -41, 29, 54, -94, 43, -50, 83, 66, 79, 39]
-  document.write(`<div>Масив: ${arrRandom.join(', ')}</div><hr>
-								<h2 class="title-solution">Рішення:</h2>`)
-  document.write("<h3> Задача 1. Підрахувати скільки було обмінів під час сортування бульбашкою</h3>")
+  document.write(`<div>Array: ${arrRandom.join(', ')}</div><hr>
+								<h2 class="title-solution">Solution:</h2>`)
+  document.write("<h3> Task 1. Count the number of exchanges during bubble sort</h3>")
 
 
 
@@ -13,9 +13,9 @@ if (confirm('Почати тестування?')) {
 
   let arrRandom1: number[] = [...arrRandom];
   /**
-   * Підрахувує кількість обмінів під час сортування бульбашкою
-   * @param{number[]} arr - масив 
-   * @returns{number} кількість обмінів під час сортування бульбашкою
+   * Counts the number of exchanges during bubble sort
+   * @param{number[]} arr - array
+   * @returns{number} number of exchanges during bubble sort
    */
   function getNumExchangesBubble(arr: number[]): number {
     let changed: boolean
@@ -35,16 +35,16 @@ if (confirm('Почати тестування?')) {
     while (changed)
     return numChange
   }
-  document.write(` <div>Кількість обмінів: <strong>${getNumExchangesBubble(arrRandom1)}</strong></div>`)
+  document.write(` <div>Number of exchanges: <strong>${getNumExchangesBubble(arrRandom1)}</strong></div>`)
 
-  // Задача 2. Дано масив 30 випадкових цілих чисел. Підрахувати скільки було обмінів під час сортування змішуванням.
-  document.write("<h3> Задача 2. Підрахувати скільки було обмінів під час сортування змішуванням</h3>")
+  // Task 2. Given an array of 30 random integers. Count the number of exchanges during cocktail sort.
+  document.write("<h3> Task 2. Count the number of exchanges during cocktail sort</h3>")
   let arrRandom2: number[] = [...arrRandom];
 
   /**
-   * Підрахувує кількість обмінів під час сортування змішуванням
-   * @param{number[]} arr - масив 
-   * @returns{number} кількість обмінів під час сортування змішуванням
+   * Counts the number of exchanges during cocktail sort
+   * @param{number[]} arr - array
+   * @returns{number} number of exchanges during cocktail sort
    */
   function getNumExchangesMix(arr: number[]): number {
     let leftIndex: number = 0
@@ -72,16 +72,16 @@ if (confirm('Почати тестування?')) {
     }
     return numChange
   }
-  document.write(`<div>Кількість обмінів: <strong>${getNumExchangesMix(arrRandom2)}</strong></div>`)
+  document.write(`<div>Number of exchanges: <strong>${getNumExchangesMix(arrRandom2)}</strong></div>`)
 
-  // Задача 3. Підрахувати скільки було обмінів під час сортування включеннями
-  document.write("<h3> Задача 3. Підрахувати скільки було обмінів під час сортування включеннями</h3>")
+  // Task 3. Count the number of exchanges during insertion sort
+  document.write("<h3> Task 3. Count the number of exchanges during insertion sort</h3>")
   let arrRandom3: number[] = [...arrRandom];
 
   /**
- * Підрахувує кількість обмінів під час сортування включеннями
- * @param {number[]} arr - масив 
- * @returns{number} кількість обмінів під час сортування включеннями
+ * Counts the number of exchanges during insertion sort
+ * @param {number[]} arr - array
+ * @returns{number} number of exchanges during insertion sort
  */
   function getNumExchangesInclusion(arr: number[]): number {
 
@@ -99,23 +99,23 @@ if (confirm('Почати тестування?')) {
     }
     return numChange
   }
-  document.write(`<div>Кількість обмінів: <strong>${getNumExchangesInclusion(arrRandom3)}</strong></div>`)
+  document.write(`<div>Number of exchanges: <strong>${getNumExchangesInclusion(arrRandom3)}</strong></div>`)
 
-  // Задача 4. Для розглянутих методів сортування спробувати вивести етапи сортування шляхом виведення відповідних таблиць за зразком.
-  document.write("<h3> Задача 4. Для розглянутих методів сортування спробувати вивести етапи сортування шляхом виведення відповідних таблиць за зразком.</h3>")
+  // Task 4. For the considered sorting methods, try to display the sorting steps by outputting the corresponding tables as shown in the example.
+  document.write("<h3> Task 4. For the considered sorting methods, try to display the sorting steps by outputting the corresponding tables as shown in the example.</h3>")
   let arrRandom4bubble: number[] = [...arrRandom];
 
 
 
 
-  document.write(`<h2>Сортування бульбашкою:</h2>`)
+  document.write(`<h2>Bubble Sort:</h2>`)
   document.write(`<div class="steps">`)
   document.write(`<p>[${arrRandom4bubble.join(", ")}]</p>`)
 
   /**
-   * Виводить етапи сортування масиву бульбашкою
-   * @param{number[]} arr масив
-   */
+     * Displays the steps of bubble sort.
+     * @param {number[]} arr - The array.
+     */
   function showStepsBubble(arr: number[]): void {
     let numChange: number = 0
     let changed: boolean
@@ -140,13 +140,13 @@ if (confirm('Почати тестування?')) {
 
   let arrRandom4mix: number[] = [...arrRandom];
 
-  document.write(`<h2>Сортування змішуванням:</h2>`)
+  document.write(`<h2>Cocktail Sort:</h2>`)
   document.write(`<div class="steps">`)
   document.write(`<p>[${arrRandom4mix.join(", ")}]</p>`)
 
   /**
- * Виводить етапи сортування масиву змішуванням
- * @param{number[]} arr масив
+ * Displays the steps of cocktail sort
+ * @param{number[]} arr array
  */
   function showStepsMix(arr: number[]): void {
     let leftIndex: number = 0
@@ -178,14 +178,14 @@ if (confirm('Почати тестування?')) {
   showStepsMix(arrRandom4mix)
   document.write(`</div>`)
 
-  document.write(`<h2>Сортування включенням:</h2>`)
+  document.write(`<h2>Insertion Sort:</h2>`)
   let arrRandom4Inclusion: number[] = [...arrRandom];
   document.write(`<div class="steps">`)
   document.write(`<p>[${arrRandom4Inclusion.join(", ")}]</p>`)
 
   /**
- * Виводить етапи сортування масиву включеннями
- * @param{number[]} arr масив
+ * Displays the steps of insertion sort
+ * @param{number[]} arr array
  */
   function showStepsInclusion(arr: number[]): void {
     for (let k = 1; k < arr.length; k++) {
@@ -202,20 +202,20 @@ if (confirm('Почати тестування?')) {
   }
   showStepsInclusion(arrRandom4Inclusion)
   document.write(`</div>`)
-  //Задача 5. Дано масив імен. Застосовуючи відповідне сортування та бінарний пошук визначити, чи є у масиві ім’я «Olga» і під яким індексом.
+  //Task 5. Given an array of names, determine if the name "Olga" exists in the array and its index.
 
   const names: string[] = ['Daria', 'Maria', 'Olga', 'Nikolai', 'Anna', 'Sergei', 'Elena', 'Ivan', 'Tatiana', 'Mikhail'];
 
-  document.write(`<h2>Дано масив імен.</h2>`)
+  document.write(`<h2>Given an array of names.</h2>`)
 
   document.write(`<div>[${names.join(", ")}]</div>`)
-  document.write(`<h3>Задача 5. Застосовуючи відповідне сортування та бінарний пошук визначити, чи є у масиві ім’я «Olga» і під яким індексом.</h3>`)
+  document.write(`<h3>Task 5. Determine if the name "Olga" exists in the array and its index.</h3>`)
 
   /**
-   * Сортування масива бульбашкою
-   * @param{string[]} arr масив
-   * @returns{string[]} відсортований масив
-   */
+    * Sorts an array of strings using the bubble sort algorithm.
+    * @param {string[]} arr - The array.
+    * @returns {string[]} The sorted array.
+    */
   function sortStringBubble(arr: string[]): string[] {
     let changed: boolean
     do {
@@ -233,11 +233,11 @@ if (confirm('Почати тестування?')) {
     return arr
   }
   const sortedNames: string[] = sortStringBubble(names)
-  document.write(`<div>Масив відсортований бульбашкою:</div>`)
+  document.write(`<div>Array sorted with bubble sort:</div>`)
   document.write(`<div><strong>[${sortedNames.join(", ")}]</strong></div>`)
 
   /**
-   * Бінарний пошук
+   * Performs a binary search.
    * @param{string[]} arr 
    * @param{string} searchElement 
    * @param{number} start 
@@ -261,17 +261,16 @@ if (confirm('Почати тестування?')) {
 
   let indexName = binarySearch(sortedNames, 'Olga', 0, sortedNames.length - 1)
   document.write(`<hr>
-								<h2 class="title-solution">Рішення:</h2>`)
+								<h2 class="title-solution">Solution:</h2>`)
   if (indexName === -1) {
-    document.write(`<div>Такого імені у масиві немає</div>`)
+    document.write(`<div>The name "Olga" does not exist in the array</div>`)
   }
   else {
-    document.write(`<div>Ім’я «Olga» у масиві під номером ${indexName}</div>`)
+    document.write(`<div>The name "Olga" exists in the array at index ${indexName}</div>`)
   }
 
 
-  document.write(`<br><h2>Задача 6. Застосовуючи відповідне сортування та бінарний пошук визначити, чи є у масиві ім’я довжиною 5 символів і під яким індексом.
-</h2>`)
+  document.write(`<br><h2>Task 6. Given an array of names, determine if a name with a length of 5 characters exists in the array and its index.</h2>`)
   function sortStringBubbleByLength(arr: string[]): string[] {
     let changed: boolean
     do {
@@ -289,10 +288,10 @@ if (confirm('Почати тестування?')) {
     return arr
   }
   const sortedNamesByLength: string[] = sortStringBubbleByLength(names)
-  document.write(`<div>Масив відсортований бульбашкою за довжиною імен:</div>`)
+  document.write(`<div>Array sorted with bubble sort by name length:</div>`)
   document.write(`<div><strong>[${sortedNamesByLength.join(", ")}]</strong></div>`)
   /**
-   * Бінарний пошук імені довжиною 5 символів
+   * Performs a binary search for a name of a specific length.
    * @param{string[]} arr 
    * @param{number} nameLength 
    * @param{number} start 
@@ -311,21 +310,20 @@ if (confirm('Почати тестування?')) {
   }
   indexName = binarySearchNameLength(sortedNamesByLength, 5, 0, sortedNames.length - 1)
   document.write(`<hr>
-								<h2 class="title-solution">Рішення:</h2>`)
+								<h2 class="title-solution">Solution:</h2>`)
   if (indexName === -1) {
-    document.write(`<div>Ім’я довжиною 5 символів у масиві немає</div>`)
+    document.write(`<div>The name with a length of 5 characters does not exist in the array</div>`)
   }
   else {
-    document.write(`<div>Ім’я довжиною 5 символів ${sortedNamesByLength[indexName]} у масиві під номером ${indexName}</div>`)
+    document.write(`<div>The name with a length of 5 characters ${sortedNamesByLength[indexName]} exists in the array at index ${indexName}</div>`)
   }
 
-  document.write(`<br><h2>Задача 7. Сформувати двовимірний масив (4*8) з номерами днів (описати окремий тип для днів). Заповнити його випадковим чином. Підрахувати для кожного рядка кількість неділь.
-</h2>`)
+  document.write(`<br><h2>Task 7. Create a two-dimensional array (4*8) with day numbers (define a separate type for days). Fill it randomly. Count the number of Sundays for each row.</h2>`)
   type DayType = 1 | 2 | 3 | 4 | 5 | 6 | 7;
   /**
-   * 
-   * @returns {DayType[][]}
-   */
+     * Creates a two-dimensional array of random day numbers.
+     * @returns {DayType[][]}
+     */
   function createArrDayNum(): DayType[][] {
     const min: number = 1
     const max: number = 7
@@ -341,9 +339,9 @@ if (confirm('Почати тестування?')) {
 
 
   /**
-   * Виводить двовимірний масив у вигляді таблиці
-   * @param{DayType[][]} arr - двовимірний масив, який треба вивести
-   */
+     * Displays a two-dimensional array as a table.
+     * @param {DayType[][]} arr - The two-dimensional array to display.
+     */
   function printArr(arr: DayType[][]): void {
     document.write('<table>')
     for (let i = 0; i < arr.length; i++) {
@@ -367,5 +365,6 @@ if (confirm('Почати тестування?')) {
 
 
   document.write(`<hr>
-								<h2 class="title-solution">Рішення:</h2><div>Кількість неділь: <strong>${sevenNumRow.join(', ')}</strong></div>`)
+        <h2 class="title-solution">Solution:</h2>
+        <div>Number of Sundays: <strong>${sevenNumRow.join(', ')}</strong></div>`);
 }
