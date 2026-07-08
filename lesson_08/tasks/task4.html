@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 4</title>
+	<title>Task 4</title>
 </head>
 
 
@@ -23,21 +23,21 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 4</h1>
+					<h1>Task 4</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Дано послідовність платіжок протягом року. Знайти сумарну кількість грошей за:</p>
-							<p>1) за весь рік;</p>
-							<p>2) у першій половині року;</p>
-							<p>3) у другій половині року;</p>
-							<p>4) за літо;</p>
-							<p>5) за ІІ квартал;</p>
-							<p>6) за парні місяці (з парними номерами);</p>
-							<p>7) за місяці, які є початковими у сезоні (весна, літо, осінь, зима).</p>
+							<p>Given a sequence of payments throughout the year, find the total amount of money for:</p>
+							<p>1) the entire year;</p>
+							<p>2) the first half of the year;</p>
+							<p>3) the second half of the year;</p>
+							<p>4) summer;</p>
+							<p>5) the second quarter;</p>
+							<p>6) even months (with even numbers);</p>
+							<p>7) the months that are the start of a season (spring, summer, fall, winter).</p>
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								function getTotalAmount(arr) {
 									let sum = 0
 									for (let i = 0; i < arr.length; i++) {
@@ -97,16 +97,16 @@
 
 								const payments = [2000, 234, 5000, 46, 1000, 509, 2000, 1678, 1200, 290, 456, 678]
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<div>Послідовність платіжок протягом року: ${payments} </div>
+							<h2 class="title-solution">Solution:</h2>
+							<div>Sequence of payments throughout the year: ${payments} </div>
 							<hr>
-							<div>Сумарна кількість грошей за весь рік:<strong> ${getTotalAmount(payments)} грн.</strong></div>
-						<div>Сумарна кількість грошей у першій половині року:<strong> ${getAmountFirstHalfYear(payments)} грн.</strong></div>
-						<div>Сумарна кількість грошей у другій половині року:<strong> ${getAmountSecondHalfYear(payments)} грн.</strong></div>
-						<div>Сумарна кількість грошей за літо:<strong> ${getAmountSummer(payments)} грн.</strong></div>
-						<div>Сумарна кількість грошей за ІІ квартал:<strong> ${getAmountSecondQuarter(payments)} грн.</strong></div>
-						<div>Сумарна кількість грошей за парні місяці:<strong> ${getAmountEvenMonths(payments)} грн.</strong></div>
-						<div>Сумарна кількість грошей за місяці, які є початковими у сезоні (весна, літо, осінь, зима):<strong> ${getAmountStartSeason(payments)} грн.</strong></div>
+							<div>Total amount of money for the entire year:<strong> ${getTotalAmount(payments)} UAH.</strong></div>
+						<div>Total amount of money for the first half of the year:<strong> ${getAmountFirstHalfYear(payments)} UAH.</strong></div>
+						<div>Total amount of money for the second half of the year:<strong> ${getAmountSecondHalfYear(payments)} UAH.</strong></div>
+						<div>Total amount of money for summer:<strong> ${getAmountSummer(payments)} UAH.</strong></div>
+						<div>Total amount of money for the second quarter:<strong> ${getAmountSecondQuarter(payments)} UAH.</strong></div>
+						<div>Total amount of money for even months:<strong> ${getAmountEvenMonths(payments)} UAH.</strong></div>
+						<div>Total amount of money for the months that are the start of a season (spring, summer, fall, winter):<strong> ${getAmountStartSeason(payments)} UAH.</strong></div>
 							`)
 							}
 						</script>

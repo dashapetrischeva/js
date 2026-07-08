@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 1</title>
+	<title>Task 1</title>
 </head>
 
 
@@ -23,16 +23,21 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 1</h1>
+					<h1>Task 1</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії
-								він відноситься (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і
-								відмінно), трійочник(є хоча би одна трійка)).</p>
+							<p>
+								Given an array containing grades for K subjects, calculate the average grade and determine the
+								student's category:
+								excellent student (all excellent grades), failing student (has at least one grade of 2),
+								good student (only good and excellent grades), or satisfactory student (has at least one grade
+								of 3).
+							</p>
 						</div>
+
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								function getAverageScore(arr) {
 									let sum = 0
 									for (let i = 0; i < arr.length; i++) {
@@ -40,8 +45,8 @@
 									}
 									return sum / arr.length
 								}
-								function getMinInArray(arr) {
 
+								function getMinInArray(arr) {
 									let min = arr[0]
 									for (let i = 1; i < arr.length; i++) {
 										if (arr[i] < min) {
@@ -55,33 +60,34 @@
 									let cat
 									switch (min) {
 										case 2:
-											cat = 'двійочник'
+											cat = 'Failing student'
 											break
 										case 3:
-											cat = 'трійочник'
+											cat = 'Satisfactory student'
 											break
 										case 4:
-											cat = 'хорошист'
+											cat = 'Good student'
 											break
-										default: cat = 'відмінник'
+										default:
+											cat = 'Excellent student'
 											break
 									}
 									return cat
 								}
+
 								let arrScore = [5, 2, 3, 3, 5, 5, 4, 4, 4]
-								const AverageScore = getAverageScore(arrScore)
+								const averageScore = getAverageScore(arrScore)
 								const category = getCategory(getMinInArray(arrScore))
+
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2><div>
-								<div>Оцінки: ${arrScore} </div>
-							<hr>
-							Середній бал : ${AverageScore.toFixed(2)}. Це ${category}</div>`)
-
+			<h2 class="title-solution">Solution:</h2>
+			<div>
+				<div>Grades: ${arrScore}</div>
+				<hr>
+				Average grade: ${averageScore.toFixed(2)}. Category: ${category}
+			</div>
+		`)
 							}
-
-
-
-
 						</script>
 
 					</div>

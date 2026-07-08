@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 5</title>
+	<title>Task 5</title>
 </head>
 
 
@@ -23,18 +23,18 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 5</h1>
+					<h1>Task 5</h1>
 					<div class="task">
 
 						<h2>
-							Дано одновимірний масив, у якому зберігається певна виграшна сума (елементи заповнюються
-							випадковим чином значеннями від -500 до 500). Надаючи користувачу можливість вибирати номери
-							елементів (поки він не відмовиться). Знаходити сумарний виграш.
+							Given a one-dimensional array where a certain winning amount is stored (elements are filled
+							randomly with values from -500 to 500). Providing the user with the ability to select element
+							numbers (until they decline). Finding the total winning amount.
 						</h2>
 						<script>
 
-							if (confirm('Почати тестування?')) {
-								const arrayElementsNumber = parseInt(prompt("Введіть кількість елементів у масиві:"))
+							if (confirm('Start testing?')) {
+								const arrayElementsNumber = parseInt(prompt("Enter the number of elements in the array:"))
 								function fillingArray(num) {
 									let arr = []
 									const minNum = -500
@@ -49,7 +49,7 @@
 
 									let sum = 0
 									while (true) {
-										let ElementNum = prompt(`Введіть номер елемента (1-${arr.length}):`)
+										let ElementNum = prompt(`Enter the number of the element (1-${arr.length}):`)
 										if (ElementNum === null) break
 										ElementNum = parseInt(ElementNum)
 
@@ -61,10 +61,10 @@
 
 
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<div>Масив з виграшною сумою: ${winningAmounts} </div>
+							<h2 class="title-solution">Solution:</h2>
+							<div>Array with the winning amount: ${winningAmounts} </div>
 							<hr>
-							<div>Сумарний виграш:<strong> ${totalAmount(winningAmounts)} грн.</strong></div>
+							<div>Total winning amount:<strong> ${totalAmount(winningAmounts)} UAH.</strong></div>
 					
 							`)
 							}

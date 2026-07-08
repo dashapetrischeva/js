@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 3</title>
+	<title>Task 3</title>
 </head>
 
 
@@ -23,17 +23,17 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 3</h1>
+					<h1>Task 3</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Дано послідовність оцінок учня. Підрахувати кількість:</p>
-							<p>1) двійок</p>
-							<p>2) кількість хороших оцінок (добре, відмінно);</p>
-							<p>3) кількість оцінок, які нижче середнього.</p>
+							<p>Given a sequence of student grades, calculate the number of:</p>
+							<p>1) fives</p>
+							<p>2) the number of good grades (good, excellent);</p>
+							<p>3) the number of grades that are below the average.</p>
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								function getTwoNumber(arr) {
 									let num = 0
 									for (let i = 0; i < arr.length; i++) {
@@ -68,14 +68,14 @@
 								}
 								const studentGrades = [2, 3, 4, 5, 5, 5, 2]
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<div>Послідовність оцінок учня: ${studentGrades} </div>
+							<h2 class="title-solution">Solution:</h2>
+							<div>Sequence of student grades: ${studentGrades} </div>
 							<hr>
-							<div>Кількість двійок :<strong> ${getTwoNumber(studentGrades)}</strong> </div>
+							<div>Number of twos :<strong> ${getTwoNumber(studentGrades)}</strong> </div>
 							<div>
-							Кількість хороших оцінок (добре, відмінно) :<strong> ${getGoodGradesNumber(studentGrades)} </strong></div>
+							Number of good grades (good, excellent) :<strong> ${getGoodGradesNumber(studentGrades)} </strong></div>
 						<div>
-							Кількість оцінок, які нижче середнього (${getAverageScore(studentGrades).toFixed(2)}) :<strong> ${getGradesLessAverage(studentGrades)} </strong></div>
+							Number of grades below the average (${getAverageScore(studentGrades).toFixed(2)}) :<strong> ${getGradesLessAverage(studentGrades)} </strong></div>
 							`)
 
 							}

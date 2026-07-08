@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 2</title>
+	<title>Task 2</title>
 </head>
 
 
@@ -23,18 +23,20 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 2</h1>
+					<h1>Task 2</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Дано масив, який зберігає кількість відвідувачів магазину протягом тижня. Вивести на екран:</p>
-							<p>● номери днів, протягом яких кількість відвідувачів була меншою за 20;</p>
-							<p>● номери днів, коли кількість відвідувачів була мінімальною;</p>
-							<p>● номери днів, коли кількість відвідувачів була максимальною;</p>
-							<p>● загальну кількість клієнтів у робочі дні та окремо загальну кількість днів на вихідних.</p>
+							<p>Given an array that stores the number of visitors to a store throughout the week, display on the
+								screen:</p>
+							<p>● numbers of days when the number of visitors was less than 20;</p>
+							<p>● numbers of days when the number of visitors was minimum;</p>
+							<p>● numbers of days when the number of visitors was maximum;</p>
+							<p>● the total number of clients on weekdays and separately the total number of days on weekends.
+							</p>
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								function getTotalCustomersNumberWeekdays(arr) {
 									let totalNum = 0
 									for (let i = 0; i < 5; i++) {
@@ -55,7 +57,7 @@
 									for (let i = 0; i < arr.length; i++) {
 										if (arr[i] > max) {
 											max = arr[i]
-											arrMaxNum = [i + 1] // номери днів тижня з 1
+											arrMaxNum = [i + 1]
 										}
 										else if (arr[i] === max) {
 											arrMaxNum.push(i + 1)
@@ -88,18 +90,18 @@
 								}
 								const arrClientsNum = [90, 9, 100, 120, 19, 120, 9]
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2><div>
-								<div>Кількість відвідувачів магазину протягом тижня: ${arrClientsNum} </div>
+							<h2 class="title-solution">Solution:</h2><div>
+								<div>Number of visitors to the store throughout the week: ${arrClientsNum} </div>
 							<hr>
-							Загальна кількість клієнтів у робочі дні :<strong> ${getTotalCustomersNumberWeekdays(arrClientsNum)} </strong> </div>
+							Total number of clients on weekdays :<strong> ${getTotalCustomersNumberWeekdays(arrClientsNum)} </strong> </div>
 							<div>
-							Загальна кількість клієнтів у вихідні дні :<strong> ${getTotalCustomersNumberWeekends(arrClientsNum)} </strong></div>
+							Total number of clients on weekends :<strong> ${getTotalCustomersNumberWeekends(arrClientsNum)} </strong></div>
 							<div>
-							Номери днів, коли кількість відвідувачів була максимальною :<strong> ${getMaxCustomersNumber(arrClientsNum)} </strong></div>
+							Days with the maximum number of visitors :<strong> ${getMaxCustomersNumber(arrClientsNum)} </strong></div>
 							<div>
-							Номери днів, коли кількість відвідувачів була мінімальною :<strong> ${getMinCustomersNumber(arrClientsNum)} </strong></div>
+							Days with the minimum number of visitors :<strong> ${getMinCustomersNumber(arrClientsNum)} </strong></div>
 								<div>
-							Номери днів, протягом яких кількість відвідувачів була меншою за 20 :<strong> ${getDaysNumbersVisitorsNumberLess20(arrClientsNum)} </strong></div>
+							Numbers of days when the number of visitors was less than 20 :<strong> ${getDaysNumbersVisitorsNumberLess20(arrClientsNum)} </strong></div>
 							`)
 
 							}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 1</title>
+	<title>Task 1</title>
 </head>
 
 
@@ -23,16 +23,16 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 1</h1>
+					<h1>Task 1</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії
-								він відноситься (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і
-								відмінно), трійочник(є хоча би одна трійка)).</p>
+							<p>Given an array containing grades for K subjects, find the average grade and determine which
+								category it belongs to (excellent student, poor student (has at least one failing grade), good
+								student (grades are good and excellent), or fair student (has at least one fair grade)).</p>
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								function getAverageScore(arr) {
 									let sum = 0
 									for (let i = 0; i < arr.length; i++) {
@@ -57,20 +57,20 @@
 											isFour = true
 										}
 									}
-									if (isTwo) cat = 'двійочник'
-									else if (isThree) cat = 'трійочник'
-									else if (isFour) cat = 'хорошист'
-									else cat = 'відмінник'
+									if (isTwo) cat = 'poor student'
+									else if (isThree) cat = 'fair student'
+									else if (isFour) cat = 'good student'
+									else cat = 'excellent student'
 									return cat
 								}
 								let arrScore = [5, 2, 3, 3, 5, 5, 4, 4, 4]
 								const AverageScore = getAverageScore(arrScore)
 								const category = getCategory(arrScore)
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2><div>
-								<div>Оцінки: ${arrScore} </div>
+							<h2 class="title-solution">Solution:</h2><div>
+								<div>Grades: ${arrScore} </div>
 							<hr>
-							Середній бал : ${AverageScore.toFixed(2)}. Це ${category}</div>`)
+							Average Score : ${AverageScore.toFixed(2)}. This is a ${category}</div>`)
 
 							}
 
