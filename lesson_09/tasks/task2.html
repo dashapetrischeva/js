@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 2</title>
+	<title>Task 2</title>
 </head>
 
 
@@ -23,23 +23,23 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 2</h1>
+					<h1>Task 2</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Користувач вводить кількість елементів. Створити масив, у якому перша половина заповнена 1-цями,
-								а друга заповнена 7-ками.</p>
+							<p>User enters the number of elements. Create an array, in which the first half is filled with 1's,
+								and the second half is filled with 7's.</p>
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
-								const elementsNumber = parseInt(prompt('Введіть кількість елементів', '6'))
+							if (confirm('Start testing?')) {
+								const elementsNumber = parseInt(prompt('Enter the number of elements', '6'))
 								const halfElementsNumber = Math.floor(elementsNumber / 2)
 								let arr = new Array(elementsNumber).fill(1, 0, halfElementsNumber).fill(7, halfElementsNumber)
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<div>Кількість елементів: ${elementsNumber} </div>
+							<h2 class="title-solution">Solution:</h2>
+							<div>Number of elements: ${elementsNumber} </div>
 							<hr>
-								<div>Масив: ${arr} </div>`)
+								<div>Array: ${arr} </div>`)
 							}
 
 

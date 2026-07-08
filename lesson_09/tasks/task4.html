@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 4</title>
+	<title>Task 4</title>
 </head>
 
 
@@ -23,21 +23,21 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 4</h1>
+					<h1>Task 4</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Дано масив елементів. Вивести на екран елементи, що більші за 100
+							<p>Given an array of elements. Display elements that are greater than 100
 							</p>
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								const arr = [200, 100, 90, 89, 300, 400, 500]
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<div>Масив: ${arr} </div>
+							<h2 class="title-solution">Solution:</h2>
+							<div>Array: ${arr} </div>
 							<hr>
-							<div>Елементи масиву більші за 100: </div>
+							<div>Elements greater than 100: </div>
 							`)
 								for (let element of arr) {
 									if (element > 100) document.write(`<div><strong>${element}</strong></div>`)

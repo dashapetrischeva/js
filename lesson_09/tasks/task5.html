@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 5</title>
+	<title>Task 5</title>
 </head>
 
 
@@ -23,19 +23,19 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 5</h1>
+					<h1>Task 5</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Дано масив елементів. Знайти добуток додатних елементів
+							<p>Given an array of elements. Find the product of positive elements
 							</p>
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								const arr = [20, 10, 9, -89, 30, -40, -50, 34, 2, -2]
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<div>Масив: ${arr} </div>
+							<h2 class="title-solution">Solution:</h2>
+							<div>Array: ${arr} </div>
 							<hr>
 							`)
 								let product = 1
@@ -43,7 +43,7 @@
 									if (element > 0) product *= element
 								}
 								document.write(`
-<div>Добуток додатних елементів: <strong> ${product} </strong></div>
+<div>Product of positive elements: <strong> ${product} </strong></div>
 							`)
 							}
 						</script>

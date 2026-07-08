@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 9</title>
+	<title>Task 9</title>
 </head>
 
 
@@ -23,25 +23,24 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 9</h1>
+					<h1>Task 9</h1>
 					<div class="task">
 
 						<h2>
-							Дано масив імен. Сформувати масив з перших літер цих імен.
-
+							Given an array of names. Form an array with the first letters of these names.
 						</h2>
 						<script>
 
-							if (confirm('Почати тестування?')) {
-								const listNames = ['Іван', 'Марія', 'Володимир', 'Петро', 'Дмитро', 'Оксана']
+							if (confirm('Start testing?')) {
+								const listNames = ['Ivan', 'Maria', 'Volodumur', 'Petro', 'Dmutro', 'Oksana']
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<div>Масив імен: ${listNames} </div>
+							<h2 class="title-solution">Solution:</h2>
+							<div>Array of names: ${listNames} </div>
 							<hr>
 							`)
 								const listFirstLetters = listNames.map(name => name[0])
 								document.write(`
-							<div>Масив з перших літер імен:<strong> ${listFirstLetters} </strong></div>
+							<div>Array of first letters of names:<strong> ${listFirstLetters} </strong></div>
 							`)
 							}
 						</script>

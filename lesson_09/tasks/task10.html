@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 10</title>
+	<title>Task 10</title>
 </head>
 
 
@@ -23,26 +23,25 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 10</h1>
+					<h1>Task 10</h1>
 					<div class="task">
 
 						<h2>
-							Дано масив цін у грн. Податок складає 20%. Сформувати масив, який буде містити величину сплаченого
-							податку у грн.
-
+							Given an array of prices in UAH. The tax rate is 20%. Form an array that will contain the amount of
+							tax paid in UAH.
 						</h2>
 						<script>
 
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								const pricesGrn = [100, 340, 230, 450, 680, 500, 3000]
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<div>Масив цін: ${pricesGrn} </div>
+							<h2 class="title-solution">Solution:</h2>
+							<div>Array of prices: ${pricesGrn} </div>
 							<hr>
 							`)
 								const listTaxGrn = pricesGrn.map(price => price * 0.2)
 								document.write(`
-							<div>Масив сплаченого податку:<strong> ${listTaxGrn} </strong></div>
+							<div>Array of tax paid:<strong> ${listTaxGrn} </strong></div>
 							`)
 							}
 						</script>

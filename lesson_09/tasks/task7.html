@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 7</title>
+	<title>Task 7</title>
 </head>
 
 
@@ -23,18 +23,19 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 7</h1>
+					<h1>Task 7</h1>
 					<div class="task">
 
 						<h2>
-							Дано масив цін. Змінити цей масив так, що на ціни товарів, які більші за 1000 грн. дати 30% знижки.
+							Given an array of prices. Modify this array so that a 30% discount is applied to the prices of
+							items that are greater than 1000 UAH.
 						</h2>
 						<script>
-							if (confirm('Почати тестування?')) {
+							if (confirm('Start testing?')) {
 								const prices = [5000, 350, 34, 7000, 230, 1200]
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<div>Масив: ${prices} </div>
+							<h2 class="title-solution">Solution:</h2>
+							<div>Array: ${prices} </div>
 							<hr>
 							`)
 								prices.forEach(
@@ -43,7 +44,7 @@
 									}
 								)
 								document.write(`
-							<div>Змінений масив: <strong>${prices} </strong></div>
+							<div>Modified array: <strong>${prices} </strong></div>
 							`)
 
 

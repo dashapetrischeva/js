@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 1</title>
+	<title>Task 1</title>
 </head>
 
 
@@ -23,22 +23,22 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 1</h1>
+					<h1>Task 1</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Користувач вводить кількість елементів. Створити масив, що складається з вказаної кількості
-								елементів заповнених нулями.</p>
+							<p>User enters the number of elements. Create an array consisting of the specified number of
+								elements filled with zeros.</p>
 						</div>
 						<script>
-							if (confirm('Почати тестування?')) {
-								const elementsNumber = parseInt(prompt('Введіть кількість елементів', '5'))
+							if (confirm('Start testing?')) {
+								const elementsNumber = parseInt(prompt('Enter the number of elements', '5'))
 								let arr = new Array(elementsNumber).fill(0)
 								document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<div>Кількість елементів: ${elementsNumber} </div>
+							<h2 class="title-solution">Solution:</h2>
+							<div>Number of elements: ${elementsNumber} </div>
 							<hr>
-								<div>Масив: ${arr} </div>`)
+								<div>Array: ${arr} </div>`)
 							}
 
 
