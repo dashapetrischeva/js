@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 2</title>
+	<title>Task 2</title>
 </head>
 
 
@@ -23,21 +23,22 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 2</h1>
+					<h1>Task 2</h1>
 					<div class="task">
 
 						<h2>
-							З клавіатури вводиться початкове значення суми. Поки сума є меншою за 100 додавати до неї числа,
-							які вводяться з клавіатури.
+							Enter the initial value of the sum from the keyboard. While the sum is less than 100, add numbers
+							to it,
+							which are entered from the keyboard.
 						</h2>
 						<script>
-							let sum = parseFloat(prompt(`Введіть початкове значення суми`, '20'))
+							let sum = parseFloat(prompt(`Enter the initial value of the sum`, '20'))
 							while (sum < 100) {
-								sum += parseFloat(prompt(`Сума= ${sum}. Введіть число`, '10'))
+								sum += parseFloat(prompt(`Sum = ${sum}. Enter a number`, '10'))
 							}
 							document.write(`
-							<h2 class="title-solution">Рішення:</h2>
-							<p>Ми закінчили. Сума = ${sum} </p>`)
+							<h2 class="title-solution">Solution:</h2>
+							<p>We are done. Sum = ${sum} </p>`)
 						</script>
 
 					</div>

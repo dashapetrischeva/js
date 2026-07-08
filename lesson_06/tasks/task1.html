@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/style.css">
-	<title>Задача 1</title>
+	<title>Task 1</title>
 </head>
 
 
@@ -23,19 +23,20 @@
 		<main class="page">
 			<div class="article">
 				<div class="article__container">
-					<h1>Задача 1</h1>
+					<h1>Task 1</h1>
 					<div class="task">
 
 						<div class="task-description">
-							<p>Зобразити рівнобедрений трикутник із символів ^. Висоту задає користувач. Наприклад, на екрані
-								висота =5.</p>
+							<p>Display an isosceles triangle made of ^ characters. The height is specified by the user. For
+								example, on the screen
+								height = 5.</p>
 							<img src="../../img/6/1.jpg" alt="Image">
 						</div>
 						<script>
 
-							const height = parseInt(prompt(`Введіть висоту трикутника`, '5'))
+							const height = parseInt(prompt(`Enter the height of the triangle`, '5'))
 							document.write(`
-							<h2 class="title-solution">Рішення:</h2>`)
+							<h2 class="title-solution">Solution:</h2>`)
 							document.write(`<div class="triangle">`)
 							for (let i = 0; i < height; i++) {
 
