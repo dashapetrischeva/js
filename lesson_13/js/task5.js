@@ -1,11 +1,11 @@
 "use strict";
-if (confirm('Почати тестування?')) {
-    document.write(`<h2 class="title-solution">Рішення:</h2>`);
+if (confirm('Start testing?')) {
+    document.write(`<h2 class="title-solution">Solution:</h2>`);
     /**
-     * Замикання
-     * @param{number} min мінімальне значення
-     * @param{number} max максимальне значення
-     * @returns{() => number} функція, яка повертає наступне число
+     * Closure
+     * @param{number} min minimum value
+     * @param{number} max maximum value
+     * @returns{() => number} function that returns the next number
      */
     function createIterator(min, max) {
         let current = min - 1;
