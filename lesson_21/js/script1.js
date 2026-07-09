@@ -1,5 +1,5 @@
 const startDate = new Date()
-if (confirm('Почати тестування?')) {
+if (confirm('Start testing?')) {
 	function print(container, content, tag) {
 		let myTag = document.createElement(tag)
 		myTag.innerText = content
@@ -8,15 +8,15 @@ if (confirm('Почати тестування?')) {
 	const task = document.querySelector('.task')
 	const titleSolution = document.createElement('h2')
 	titleSolution.className = 'title-solution'
-	titleSolution.innerText = 'Рішення:'
+	titleSolution.innerText = 'Solution:'
 	task.append(titleSolution)
-	print(task, `Задача 1. Виводити на екран скільки хвилин користувач вже на сайті`, 'div')
+	print(task, `Task 1. Display the number of minutes the user has been on the site`, 'div')
 	const endDate = new Date()
 	const minutesCount = ((endDate - startDate) / 1000 / 60).toFixed(2)
-	print(task, `Ви вже на сайті ${minutesCount} хвилин`, 'pre')
-	// Задача 2. Вводимо час початку процедури (процедура триває 30хв). Визначити, чи процедура ще триває. 
-	print(task, `Задача 2. Вводимо час початку процедури (процедура триває 30хв). Визначити, чи процедура ще триває. `, 'div')
-	const procedureStart = prompt('Введіть час початку процедури (гг:хх)')
+	print(task, `You have been on the site for ${minutesCount} minutes`, 'pre')
+	// Task 2. Enter the start time of the procedure (the procedure lasts 30 minutes). Determine if the procedure is still ongoing.
+	print(task, `Task 2. Enter the start time of the procedure (the procedure lasts 30 minutes). Determine if the procedure is still ongoing.`, 'div')
+	const procedureStart = prompt('Enter the start time of the procedure (HH:MM)')
 	const procedureDuration = 30
 	function isProcedureOngoing(startTime, durationMinutes) {
 		const [hours, minutes] = startTime.split(':').map(Number)
@@ -26,10 +26,10 @@ if (confirm('Почати тестування?')) {
 		const now = new Date()
 		return end > now
 	}
-	let msg = isProcedureOngoing(procedureStart, procedureDuration) ? `Процедура ще триває.` : `Процедура закінчилась.`
+	let msg = isProcedureOngoing(procedureStart, procedureDuration) ? `The procedure is still ongoing.` : `The procedure has finished.`
 	print(task, msg, 'pre')
-	//Задача 3. Визначити скільки залишилось до кінця робочого дня (до 17.00)
-	print(task, `Задача 3. Визначити скільки залишилось до кінця робочого дня (до 17.00) `, 'div')
+	//Task 3. Determine how much time is left until the end of the workday (until 17:00)
+	print(task, `Task 3. Determine how much time is left until the end of the workday (until 17:00) `, 'div')
 	function timeLeftToEndOfWorkday() {
 		const endOfWorkday = new Date()
 		endOfWorkday.setHours(17, 0, 0, 0)
@@ -40,13 +40,13 @@ if (confirm('Почати тестування?')) {
 	if (timeLeftToEndOfWorkdayMS > 0) {
 		const hours = Math.floor(timeLeftToEndOfWorkdayMS / 1000 / 60 / 60)
 		const minutes = Math.floor((timeLeftToEndOfWorkdayMS / 1000 / 60) % 60)
-		msg = `До кінця робочого дня залишилось ${hours} годин ${minutes} хвилин`
+		msg = `Time left until the end of the workday: ${hours} hours ${minutes} minutes`
 	} else {
-		msg = 'Робочий день вже закінчився.'
+		msg = 'The workday has already ended.'
 	}
 	print(task, msg, 'pre')
-	//Задача 4. Створити функцію, яка дозволяє визначити, чи знаходиться вказана дата і час у межах поточного тижня (від понеділка 0 год, 0хв, до неділі 23год.59хв)
-	print(task, `Задача 4. Створити функцію, яка дозволяє визначити, чи знаходиться вказана дата і час у межах поточного тижня (від понеділка 0 год, 0хв, до неділі 23год.59хв) `, 'div')
+	//Task 4. Create a function that allows you to determine if the specified date and time are within the bounds of the current week (from Monday 0 hours, 0 minutes, to Sunday 23 hours, 59 minutes)
+	print(task, `Task 4. Create a function that allows you to determine if the specified date and time are within the bounds of the current week (from Monday 0 hours, 0 minutes, to Sunday 23 hours, 59 minutes) `, 'div')
 	function isDateInCurrentWeek(date) {
 		const now = new Date()
 
@@ -62,12 +62,12 @@ if (confirm('Почати тестування?')) {
 
 		return date >= monday && date <= sunday
 	}
-	const userDate = prompt('Введіть дату і час (рррр-мм-дд гг:хх)')
+	const userDate = prompt('Enter the date and time (YYYY-MM-DD HH:MM)')
 	const isInWeek = isDateInCurrentWeek(new Date(userDate))
-	msg = isInWeek ? 'Так, дата у межах поточного тижня' : 'Ні, дата поза межами цього тижня'
+	msg = isInWeek ? 'Yes, the date is within the bounds of the current week' : 'No, the date is outside the bounds of the current week'
 	print(task, msg, 'pre')
-	//Задача 5. При заході на сайт вітати користувача або відображати повідомлення про те,  скільки хвилин залишилось до початку робочого дня (початок о 8.00)
-	print(task, `Задача 5. При заході на сайт вітати користувача або відображати повідомлення про те,  скільки хвилин залишилось до початку робочого дня (початок о 8.00) `, 'div')
+	//Task 5. When entering the site, greet the user or display a message about how many minutes are left until the start of the workday (start at 8:00)
+	print(task, `Task 5. When entering the site, greet the user or display a message about how many minutes are left until the start of the workday (start at 8:00) `, 'div')
 
 	function checkTime(workingDayStart = '8:00') {
 		let msg
@@ -75,17 +75,17 @@ if (confirm('Почати тестування?')) {
 		const now = new Date()
 		const start = new Date(now)
 		start.setHours(startHours, startMinutes, 0, 0)
-		if (now > start) msg = 'Привіт'
+		if (now > start) msg = 'Hello'
 		else {
 			const minutesLeft = Math.ceil((start - now) / 1000 / 60)
-			msg = `До початку робочого дня залишилось ${minutesLeft} хвилин`
+			msg = `Time left until the start of the workday: ${minutesLeft} minutes`
 		}
 		return msg
 	}
 	print(task, checkTime(), 'pre')
 
-	//Задача 6. Вивести скільки зараз годин у Лондоні, Парижі, Сіднеї.
-	print(task, `Задача 6. Вивести скільки зараз годин у Лондоні, Парижі, Сіднеї. `, 'div')
+	//Task 6. Display the current time in London, Paris, and Sydney.
+	print(task, `Task 6. Display the current time in London, Paris, and Sydney. `, 'div')
 	function getTimeInCity(cityName, timeZone) {
 		const options = {
 			timeZone,
@@ -93,32 +93,32 @@ if (confirm('Почати тестування?')) {
 			minute: '2-digit',
 			second: '2-digit',
 		}
-		return `У ${cityName} зараз: ${new Date().toLocaleTimeString('uk-UA', options)}`
+		return `In ${cityName} it is currently: ${new Date().toLocaleTimeString('uk-UA', options)}`
 	}
 
 	const cities = [
-		{ name: 'Лондоні', zone: 'Europe/London' },
-		{ name: 'Парижі', zone: 'Europe/Paris' },
-		{ name: 'Сіднеї', zone: 'Australia/Sydney' },
+		{ name: 'London', zone: 'Europe/London' },
+		{ name: 'Paris', zone: 'Europe/Paris' },
+		{ name: 'Sydney', zone: 'Australia/Sydney' },
 	]
 
 	for (const city of cities) {
 		print(task, getTimeInCity(city.name, city.zone), 'pre')
 	}
 
-	//Задача 7. Дано список студентів (ім’я і дата народження: у формі тексту (день.місяць.рік). Знайти найстаршого студента
-	print(task, `Задача 7. Дано список студентів (ім’я і дата народження: у формі тексту (день.місяць.рік). Знайти найстаршого студента `, 'div')
+	//Task 7. Given a list of students (name and birth date: in the form of text (day.month.year)), find the oldest student
+	print(task, `Task 7. Given a list of students (name and birth date: in the form of text (day.month.year)), find the oldest student `, 'div')
 	const students = [
-		{ name: 'Анна Коваленко', birthDate: '12.03.2002' },
-		{ name: 'Іван Петренко', birthDate: '25.07.2001' },
-		{ name: 'Марія Шевченко', birthDate: '08.11.2003' },
-		{ name: 'Олег Іванов', birthDate: '30.01.2000' },
-		{ name: 'Катерина Лисенко', birthDate: '19.05.2002' },
-		{ name: 'Дмитро Сидоренко', birthDate: '04.09.2001' },
-		{ name: 'Наталія Гончар', birthDate: '16.02.2003' },
-		{ name: 'Сергій Поліщук', birthDate: '21.06.2000' },
-		{ name: 'Оксана Кравець', birthDate: '03.12.2002' },
-		{ name: 'Юрій Бондар', birthDate: '27.10.2001' },
+		{ name: 'Anna Kovalenko', birthDate: '12.03.2002' },
+		{ name: 'Ivan Petrenko', birthDate: '25.07.2001' },
+		{ name: 'Maria Shevchenko', birthDate: '08.11.2003' },
+		{ name: 'Oleg Ivanov', birthDate: '30.01.2000' },
+		{ name: 'Kateryna Lysenko', birthDate: '19.05.2002' },
+		{ name: 'Dmytro Sidorenko', birthDate: '04.09.2001' },
+		{ name: 'Natalia Hontar', birthDate: '16.02.2003' },
+		{ name: 'Sergiy Polishchuk', birthDate: '21.06.2000' },
+		{ name: 'Oksana Kravets', birthDate: '03.12.2002' },
+		{ name: 'Yuriy Bondar', birthDate: '27.10.2001' },
 	]
 	function parseDate(dateString) {
 		const [day, month, year] = dateString.split('.').map(Number)
@@ -129,19 +129,19 @@ if (confirm('Почати тестування?')) {
 		return students.reduce((oldest, current) =>
 			parseDate(current.birthDate) < parseDate(oldest.birthDate) ? current : oldest)
 	}
-	print(task, `Найстарший студент - ${oldestStudent(students).name}`, 'pre')
-	//Задача 8. Визначити скільки пройшло секунд після заходу на сайт перш ніж користувач зробив рух мишкою.
+	print(task, `The oldest student is ${oldestStudent(students).name}`, 'pre')
+	//Task 8. Determine how many seconds have passed since the user visited the site until they moved the mouse.
 	function mouseMoveHandler() {
 		const moveDate = new Date()
 		const secondsPassed = (moveDate - startDate) / 1000
 		document.removeEventListener('mousemove', mouseMoveHandler)
-		alert(`Ви зробили рух мишкою через ${secondsPassed.toFixed(2)} секунд`)
+		alert(`You moved the mouse after ${secondsPassed.toFixed(2)} seconds`)
 
 	}
 	document.addEventListener('mousemove', mouseMoveHandler)
-	//Задача  9. Користувачка планувала оформила дектретну відпустку на 200 днів (дата початку відпустки вводиться). Визначити чи відпустка вже триває і чи не закінчилась.
-	print(task, `Задача  9. Користувачка планувала оформила дектретну відпустку на 200 днів (дата початку відпустки вводиться). Визначити чи відпустка вже триває і чи не закінчилась. `, 'div')
-	const vacationStartDate = prompt('Введіть дату початку відпустки (дд.мм.рррр)')
+	//Task 9. A user planned to take a 200-day maternity leave (the start date is entered). Determine if the leave is already in progress and if it has not ended.
+	print(task, `Task 9. A user planned to take a 200-day maternity leave (the start date is entered). Determine if the leave is already in progress and if it has not ended. `, 'div')
+	const vacationStartDate = prompt('Enter the start date of the vacation (dd.mm.yyyy)')
 	function vacationCheck(vacationStart) {
 		const [day, month, year] = vacationStart.split('.').map(Number)
 		const startDate = new Date(year, month - 1, day)
@@ -149,17 +149,17 @@ if (confirm('Почати тестування?')) {
 		endDate.setDate(endDate.getDate() + 200)
 		const currentDate = new Date()
 		if (startDate <= currentDate && currentDate <= endDate)
-			print(task, 'Відпустка вже триває і не закінчилась', 'pre')
+			print(task, 'The vacation is already in progress and has not ended.', 'pre')
 		else if (currentDate > endDate)
-			print(task, 'Відпустка вже закінчилась', 'pre')
+			print(task, 'The vacation has already ended.', 'pre')
 		else
-			print(task, 'Відпустка ще не почалась', 'pre')
+			print(task, 'The vacation has not started yet.', 'pre')
 	}
 	vacationCheck(vacationStartDate)
-	//Задача 10 . Дано дата виробництва йогурта (вводимо рік, місяць, день) та кількість днів придатності. Визначити чи є він придатним на даний момент.
-	print(task, `Задача 10 . Дано дата виробництва йогурта (вводимо рік, місяць, день) та кількість днів придатності. Визначити чи є він придатним на даний момент. `, 'div')
-	const yogurtProductionDate = prompt('Введіть дату виробництва йогурта (рррр-мм-дд)')
-	const daysOfValidityCount = parseInt(prompt('Введіть кількість днів придатності', '30'))
+	//Task 10. Given the production date of a yogurt (input year, month, day) and the number of days of validity, determine if it is still valid.
+	print(task, `Task 10. Given the production date of a yogurt (input year, month, day) and the number of days of validity, determine if it is still valid. `, 'div')
+	const yogurtProductionDate = prompt('Enter the production date of the yogurt (yyyy-mm-dd)')
+	const daysOfValidityCount = parseInt(prompt('Enter the number of days of validity', '30'))
 	function isValid(dateString, count) {
 		let msg
 		const [year, month, day] = dateString.split('-').map(Number)
@@ -168,16 +168,16 @@ if (confirm('Почати тестування?')) {
 		expirationDate.setDate(expirationDate.getDate() + count)
 		const currentDate = new Date()
 		if (currentDate <= expirationDate)
-			msg = `Йогурт придатний до споживання. (До ${expirationDate.toLocaleDateString('uk-UA')})`
+			msg = `The yogurt is still valid. (Valid until ${expirationDate.toLocaleDateString('uk-UA')})`
 		else
-			msg = `Йогурт не придатний до споживання.Термін дії закінчився ${expirationDate.toLocaleDateString('uk-UA')}`
+			msg = `The yogurt is not valid for consumption. The validity period ended on ${expirationDate.toLocaleDateString('uk-UA')}`
 		return msg
 	}
 	print(task, isValid(yogurtProductionDate, daysOfValidityCount), 'pre')
 
 
-	//Задача 12. Сформувати масив з 1000 елементів від 1 до 800. Порівняти час сортування бульбашкою і  вставкою.
-	print(task, `Задача 12. Сформувати масив з 1000 елементів від 1 до 800. Порівняти час сортування бульбашкою і  вставкою. `, 'div')
+	//Task 12. Form an array with 1000 elements from 1 to 800. Compare the sorting time of bubble sort and insertion sort.
+	print(task, `Task 12. Form an array with 1000 elements from 1 to 800. Compare the sorting time of bubble sort and insertion sort. `, 'div')
 	function createArray() {
 		let arr = []
 		const min = 1
@@ -223,6 +223,6 @@ if (confirm('Почати тестування?')) {
 	sortInsertion([...array])
 	const endInclusion = new Date()
 	const durationInclusion = endInclusion - startInclusion
-	print(task, `Час сортування бульбашкою: ${durationBubble.toFixed(2)} мс`, 'pre')
-	print(task, `Час сортування включенням: ${durationInclusion.toFixed(2)} мс`, 'pre')
+	print(task, `Time for bubble sort: ${durationBubble.toFixed(2)} ms`, 'pre')
+	print(task, `Time for insertion sort: ${durationInclusion.toFixed(2)} ms`, 'pre')
 }
