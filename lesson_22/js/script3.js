@@ -30,35 +30,43 @@ class Task {
 		this.targetContainer = document.querySelector(targetContainerSelector)
 		this.db = new StorageDB(storageKey)
 	}
+
 	addTask() {
 		const title = document.querySelector('#title').value.trim()
 		const priority = document.querySelector('#priority').value.trim()
+
 		if (!title || !priority) {
-			alert('Будь ласка, заповніть усі поля!')
+			alert('Please fill in all fields!')
 			return
 		}
+
 		this.db.addItem({
 			id: Date.now(),
 			title,
 			priority
 		})
+
 		this.printTasks()
+
 		document.querySelector('#title').value = ''
 		document.querySelector('#priority').value = ''
 	}
+
 	createTaskEl(taskObj) {
 		const container = document.createElement('li')
-		container.innerText = `${taskObj.title} (пріоритет: ${taskObj.priority})`
+		container.innerText = `${taskObj.title} (priority: ${taskObj.priority})`
 		return container
 	}
+
 	printTasks() {
 		const list = this.db.loadData()
 		this.targetContainer.innerHTML = ''
+
 		for (const task of list) {
 			this.targetContainer.append(this.createTaskEl(task))
 		}
-
 	}
+
 	showRandomTask() {
 		const list = this.db.loadData()
 		if (list.length === 0) return
@@ -66,7 +74,7 @@ class Task {
 		const randomIndex = Math.floor(Math.random() * list.length)
 		const task = list[randomIndex]
 
-		const confirmed = confirm(`Виконати задачу: "${task.title}"?`)
+		const confirmed = confirm(`Complete the task: "${task.title}"?`)
 		if (confirmed) {
 			this.db.deleteItem(task.id)
 			this.printTasks()
