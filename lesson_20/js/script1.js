@@ -1,4 +1,4 @@
-if (confirm('Почати тестування?')) {
+if (confirm('Start testing?')) {
 	class Star {
 		constructor(image, step, interval, minSize, maxSize, cssObj) {
 			this.image = image
