@@ -1,5 +1,5 @@
-if (confirm('Почати тестування?')) {
-	document.write(`<h2 class="title-solution">Рішення:</h2>`)
+if (confirm('Start testing?')) {
+	document.write(`<h2 class="title-solution">Solution:</h2>`)
 
 	type ShowInSite = {
 		id: number,
@@ -292,7 +292,7 @@ if (confirm('Почати тестування?')) {
 			show_in_site: {
 				id: 106,
 				discount_price: 1300,
-				title: 'ціна по промокоду діє з 22.03 по 28.03',
+				title: 'the promotional code price is valid from 22.03 to 28.03.',
 				price_show_in_site_id: 5151,
 				show_in_details: 1,
 				show_in_catalog: 1,
@@ -516,24 +516,23 @@ if (confirm('Почати тестування?')) {
 		},
 	]
 
-	// Загальну вартість (нові ціни - price)
+
 
 	const totalCost: number = dataList.reduce(
 		(prevSum, product) => prevSum + product.price, 0)
 
-	document.write(` <div>1) Загальна вартість товарів: <strong>${totalCost}</strong></div>`)
+	document.write(` <div>1) Total cost of products: <strong>${totalCost}</strong></div>`)
 
-	// 2) Знайти кількість товарів, у яких ціна зменшилась (price < old_price).
+
 	const productNumberPriceDecreased: number = dataList.reduce(
 		(prevCount, product) => (product.price < product.old_price ? prevCount + 1 : prevCount), 0)
-	document.write(` <div>2) Кількість товарів, у яких ціна зменшилась: <strong>${productNumberPriceDecreased}</strong></div>`)
+	document.write(` <div>2) Number of products where the price has decreased: <strong>${productNumberPriceDecreased}</strong></div>`)
 
-	// 3) Товари, які доступні (sell_status:"available")
+
 
 	const availableProducts: Product[] = dataList.filter((product) => product.sell_status === 'available')
 	console.log(availableProducts)
-	document.write(`<div>3) Відповідь у консолі</div>`)
-	// 4) сформувати новий список об”єктів тільки доступних  для продажу товарів, які міститимуть тільки ідентифікатор товару (id), нову ціну (price), стару ціну (old_price), та ціну у доларах (usd_price)
+	document.write(`<div>3) Answer in the console</div>`)
 
 	const availableProductsPrice: ProductPrice[] = dataList.filter((product) => product.sell_status === 'available').map(product => ({
 		id: product.id,
@@ -542,6 +541,6 @@ if (confirm('Почати тестування?')) {
 		usd_price: product.usd_price,
 	}))
 	console.log(availableProductsPrice)
-	document.write(`<div>4) Відповідь у консолі</div>`)
+	document.write(`<div>4) Answer in the console</div>`)
 }
 

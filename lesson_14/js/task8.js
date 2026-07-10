@@ -1,5 +1,5 @@
 "use strict";
-if (confirm(`Чи бажаєте ви читати новини?`)) {
+if (confirm(`Do you want to read news?`)) {
     window.location.href = 'https://www.ukr.net/';
 }
 else {
