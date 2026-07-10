@@ -1,6 +1,6 @@
 "use strict";
-if (confirm('Почати тестування?')) {
-    document.write(`<h2 class="title-solution">Рішення:</h2>`);
+if (confirm('Start testing?')) {
+    document.write(`<h2 class="title-solution">Solution:</h2>`);
     class CompanyCar {
         constructor(initDriver, initBrand, initNumber) {
             this.driver = '';
@@ -14,11 +14,11 @@ if (confirm('Почати тестування?')) {
             CompanyCar.objCompanyCar = this;
         }
         toString() {
-            return `<div>Водій: ${this.driver}, марка:${this.brand}, номер:${this.number}</div>`;
+            return `<div>Driver: ${this.driver}, brand:${this.brand}, license plate:${this.number}</div>`;
         }
     }
-    const companyCar1 = new CompanyCar('Олексій Петров', 'Toyota Corolla', 'AB1234CD');
+    const companyCar1 = new CompanyCar('Oleksiy Petrov', 'Toyota Corolla', 'AB1234CD');
     document.write(companyCar1.toString());
-    const companyCar2 = new CompanyCar('Іван Коваленко', 'Ford Transit', 'CD9012GH');
+    const companyCar2 = new CompanyCar('Ivan Kovalenko', 'Ford Transit', 'CD9012GH');
     document.write(companyCar2.toString());
 }
