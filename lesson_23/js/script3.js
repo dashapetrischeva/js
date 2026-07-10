@@ -1,5 +1,5 @@
 
-if (confirm('Почати тестування?')) {
+if (confirm('Start testing?')) {
 	function print(container, content, tag) {
 		let myTag = document.createElement(tag)
 		myTag.innerText = content
@@ -8,9 +8,9 @@ if (confirm('Почати тестування?')) {
 	const task = document.querySelector('.task')
 	const titleSolution = document.createElement('h2')
 	titleSolution.className = 'title-solution'
-	titleSolution.innerText = 'Рішення:'
+	titleSolution.innerText = 'Solution:'
 	task.append(titleSolution)
-	//Створити генератор, який би випадковим чином поступово генерував вказану кількість парних чисел.
+	//Create a generator that randomly generates a specified number of even numbers.
 	function* rndEven(count) {
 		for (let i = 0; i < count; i++) {
 			const min = 2

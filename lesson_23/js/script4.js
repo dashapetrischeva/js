@@ -1,4 +1,4 @@
-if (confirm('Почати тестування?')) {
+if (confirm('Start testing?')) {
 	function print(container, content, tag) {
 		let myTag = document.createElement(tag)
 		myTag.innerText = content
@@ -7,49 +7,63 @@ if (confirm('Почати тестування?')) {
 	const task = document.querySelector('.task')
 	const titleSolution = document.createElement('h2')
 	titleSolution.className = 'title-solution'
-	titleSolution.innerText = 'Рішення:'
+	titleSolution.innerText = 'Solution:'
 	task.append(titleSolution)
-	// Задача 5. Дано список з віком учнів. Підрахувати скільки разів кожне значення зустрічається у списку і максимальне.
+	// Task 5. Given a list of students' ages. Count how many times each age appears in the list and determine the maximum age.
 	let studentsAges = [7, 7, 13, 10, 12, 12, 13, 16]
-	print(task, `Задача 5. Дано список з віком учнів: ${studentsAges.join(', ')}. Підрахувати скільки разів кожне значення зустрічається у списку і максимальне.`, 'div')
 
+	print(
+		task,
+		`Task 5. Given a list of students' ages: ${studentsAges.join(', ')}. Count how many times each age appears in the list and determine the maximum age.`,
+		'div'
+	)
 
 	let map = new Map()
+
 	for (const age of studentsAges) {
 		let count = map.get(age) ?? 0
 		map.set(age, count + 1)
 	}
 
-	map.forEach((count, age, mapRef) => {
+	map.forEach((count, age) => {
 		print(task, `${age} - ${count}`, 'pre')
 	})
 
 	let max = Math.max(...map.keys())
-	print(task, `Максимальний вік: ${max}`, 'pre')
-	// Задача 6. Дано масив книг (назва, рік видання, автор). Підрахувати кількість книг для кожного автора.
+	print(task, `Maximum age: ${max}`, 'pre')
+
+	// Task 6. Given an array of books (title, publication year, author). Count the number of books for each author.
 	const books = [
-		{ id: 1, title: 'Тіні забутих предків', year: 1911, author: 'Михайло Коцюбинський' },
-		{ id: 2, title: 'Кайдашева сім’я', year: 1879, author: 'Іван Нечуй-Левицький' },
-		{ id: 3, title: 'Маруся Чурай', year: 1979, author: 'Ліна Костенко' },
-		{ id: 4, title: 'Тигролови', year: 1944, author: 'Іван Багряний' },
-		{ id: 5, title: 'Лісова пісня', year: 1911, author: 'Леся Українка' },
-		{ id: 6, title: 'Місто', year: 1928, author: 'Валер’ян Підмогильний' },
-		{ id: 7, title: 'Зачарована Десна', year: 1957, author: 'Олександр Довженко' },
-		{ id: 8, title: 'Украдене щастя', year: 1893, author: 'Іван Франко' },
-		{ id: 9, title: 'Перехресні стежки', year: 1900, author: 'Іван Франко' },
-		{ id: 10, title: 'Сон', year: 1844, author: 'Тарас Шевченко' }
+		{ id: 1, title: 'Shadows of Forgotten Ancestors', year: 1911, author: 'Mykhailo Kotsiubynsky' },
+		{ id: 2, title: "Kaidash's Family", year: 1879, author: 'Ivan Nechui-Levytskyi' },
+		{ id: 3, title: 'Marusia Churai', year: 1979, author: 'Lina Kostenko' },
+		{ id: 4, title: 'The Hunters and the Hunted', year: 1944, author: 'Ivan Bahrianyi' },
+		{ id: 5, title: 'The Forest Song', year: 1911, author: 'Lesya Ukrainka' },
+		{ id: 6, title: 'The City', year: 1928, author: 'Valerian Pidmohylnyi' },
+		{ id: 7, title: 'The Enchanted Desna', year: 1957, author: 'Oleksandr Dovzhenko' },
+		{ id: 8, title: 'Stolen Happiness', year: 1893, author: 'Ivan Franko' },
+		{ id: 9, title: 'Cross-Paths', year: 1900, author: 'Ivan Franko' },
+		{ id: 10, title: 'The Dream', year: 1844, author: 'Taras Shevchenko' }
 	]
-	print(task, `Задача 6. Дано масив книг (назва, рік видання, автор). Підрахувати кількість книг для кожного автора.`, 'div')
+
+	print(
+		task,
+		'Task 6. Given an array of books (title, publication year, author). Count the number of books for each author.',
+		'div'
+	)
 
 	map = new Map()
+
 	for (const book of books) {
-		let BookCount = map.get(book.author) ?? 0
-		map.set(book.author, BookCount + 1)
+		let bookCount = map.get(book.author) ?? 0
+		map.set(book.author, bookCount + 1)
 	}
-	map.forEach((count, book, mapRef) => {
-		print(task, `${book} - ${count}`, 'pre')
+
+	map.forEach((count, author) => {
+		print(task, `${author} - ${count}`, 'pre')
 	})
-	//Задача 7. Дано інформацію про відвідувачів деякого сайту (для кожного відвідувача зберігається логін). Підрахувати для кожного клієнта кількість відвідувань.
+
+	// Task 7. Given information about visitors to a website (each visitor has a login). Count the number of visits for each visitor.
 	const visitors = [
 		"anna23",
 		"maxim07",
@@ -66,20 +80,34 @@ if (confirm('Почати тестування?')) {
 		"iryna",
 		"taras",
 		"maxim07"
-	];
-	print(task, `Задача 7. Дано інформацію про відвідувачів деякого сайту (для кожного відвідувача зберігається логін). Підрахувати для кожного клієнта кількість відвідувань.`, 'div')
-	print(task, `Масив відвідувачів:`, 'pre')
+	]
+
+	print(
+		task,
+		'Task 7. Given information about website visitors (each visitor has a login). Count the number of visits for each visitor.',
+		'div'
+	)
+
+	print(task, 'Visitors:', 'pre')
 	print(task, visitors.join(', '), 'p')
+
 	map = new Map()
+
 	for (const visitor of visitors) {
 		let visitorCount = map.get(visitor) ?? 0
 		map.set(visitor, visitorCount + 1)
 	}
-	map.forEach((count, visitor, mapRef) => {
+
+	map.forEach((count, visitor) => {
 		print(task, `${visitor} - ${count}`, 'pre')
 	})
-	// Задача 8. Дано масив студентів (піб, курс, факультет). Підрахувати кількість різних факультетів, та кількість студентів кожного з курсів. 
-	print(task, `Задача 8. Дано масив студентів (піб, курс, факультет). Підрахувати кількість різних факультетів, та кількість студентів кожного з курсів.`, 'div')
+
+	// Task 8. Given an array of students (full name, course, faculty). Count the number of different faculties and the number of students in each course.
+	print(
+		task,
+		'Task 8. Given an array of students (full name, course, faculty). Count the number of different faculties and the number of students in each course.',
+		'div'
+	)
 
 	const students = [
 		{ name: "Anna Kovalenko", course: 1, faculty: "Computer Science" },
@@ -94,33 +122,50 @@ if (confirm('Почати тестування?')) {
 		{ name: "Yuliia Moroz", course: 4, faculty: "Philology" }
 	]
 
-	let facultySet = new Set(students.map((student) => student.faculty))
-	print(task, `Кількість різних факультетів: ${facultySet.size}`, 'p')
-	print(task, 'Кількість студентів кожного з курсів', 'p')
+	let facultySet = new Set(students.map(student => student.faculty))
+
+	print(task, `Number of different faculties: ${facultySet.size}`, 'p')
+	print(task, 'Number of students in each course:', 'p')
+
 	map = new Map()
+
 	for (const student of students) {
 		let courseCount = map.get(student.course) ?? 0
 		map.set(student.course, courseCount + 1)
 	}
-	map.forEach((count, course, mapRef) => {
+
+	map.forEach((count, course) => {
 		print(task, `${course} - ${count}`, 'pre')
 	})
-	// Задача 9. Дано масив показів температур. Підрахувати кількість входжень кожного із показів [12.4, 24.9, 10.6, 12.4, 24.9, 12.4, 10.6, 11.9] Заокруглити вверх значення та підрахувати кількість різних показів.
+
+	// Task 9. Given an array of temperature readings. Count the occurrences of each reading. Round each value up and count the occurrences of the rounded values.
 	let temperatures = [12.4, 24.9, 10.6, 12.4, 24.9, 12.4, 10.6, 11.9]
-	print(task, `Задача 9. Дано масив показів температур. Підрахувати кількість входжень кожного із показів [12.4, 24.9, 10.6, 12.4, 24.9, 12.4, 10.6, 11.9] Заокруглити вверх значення та підрахувати кількість різних показів.`, 'div')
+
+	print(
+		task,
+		'Task 9. Given an array of temperature readings. Count the occurrences of each reading. Round each value up and count the occurrences of the rounded values.',
+		'div'
+	)
 
 	const roundedTemperatures = temperatures.map(el => Math.ceil(el))
+
 	map = new Map()
+
 	for (const temperature of roundedTemperatures) {
 		let temperatureCount = map.get(temperature) ?? 0
 		map.set(temperature, temperatureCount + 1)
 	}
-	map.forEach((count, temperature, mapRef) => {
+
+	map.forEach((count, temperature) => {
 		print(task, `${temperature} - ${count}`, 'pre')
 	})
 
-	// Задача 10 Дано два списки прізвищ студентів, що відвідують гуртки з математики і історії. Підрахувати скільки студентів з гуртка з історії також відвідують гурток з математики. Також підрахувати скільки всього студентів відвідують хоча б один гурток. 
-	print(task, `Задача 10 Дано два списки прізвищ студентів, що відвідують гуртки з математики і історії. Підрахувати скільки студентів з гуртка з історії також відвідують гурток з математики. Також підрахувати скільки всього студентів відвідують хоча б один гурток. `, 'div')
+	// Task 10. Given two lists of students' last names attending the Mathematics and History clubs. Count how many History club students also attend the Mathematics club. Also determine how many students attend at least one club.
+	print(
+		task,
+		'Task 10. Given two lists of students attending the Mathematics and History clubs. Count how many History club students also attend the Mathematics club. Also determine how many students attend at least one club.',
+		'div'
+	)
 
 	const mathClub = new Set([
 		"Kovalenko",
@@ -140,6 +185,15 @@ if (confirm('Почати тестування?')) {
 		"Moroz"
 	])
 
-	print(task, `Кількість студентів з гуртка з історії також відвідують гурток з математики: ${historyClub.intersection(mathClub).size}`, 'p')
-	print(task, `Кількість студентів які відвідують хоча б один гурток: ${historyClub.union(mathClub).size}`, 'p')
+	print(
+		task,
+		`Number of History club students who also attend the Mathematics club: ${historyClub.intersection(mathClub).size}`,
+		'p'
+	)
+
+	print(
+		task,
+		`Number of students attending at least one club: ${historyClub.union(mathClub).size}`,
+		'p'
+	)
 }

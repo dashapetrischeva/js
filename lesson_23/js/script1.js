@@ -1,4 +1,4 @@
-if (confirm('Почати тестування?')) {
+if (confirm('Start testing?')) {
 	function print(container, content, tag) {
 		let myTag = document.createElement(tag)
 		myTag.innerText = content
@@ -7,9 +7,9 @@ if (confirm('Почати тестування?')) {
 	const task = document.querySelector('.task')
 	const titleSolution = document.createElement('h2')
 	titleSolution.className = 'title-solution'
-	titleSolution.innerText = 'Рішення:'
+	titleSolution.innerText = 'Solution:'
 	task.append(titleSolution)
-	//Дано клас PhoneNumber. Створити функцію перетворення до string, при якому на основі номера виводиться оператор(050…. 🡪 MTC, 096… 🡪 Kyivstar, ….)
+	//Given a PhoneNumber class. Create a function to convert to string, where the operator is displayed based on the number (050…. - MTC, 096… - Kyivstar, ….)
 	class PhoneNumber {
 		constructor(number) {
 			this.number = number.trim()
@@ -38,7 +38,7 @@ if (confirm('Почати тестування?')) {
 					result = 'Lifecell'
 					break
 				default:
-					result = 'Невідомий оператор'
+					result = 'Unknown operator'
 			}
 			return `${this.number} — ${result}`
 		}
@@ -48,4 +48,5 @@ if (confirm('Почати тестування?')) {
 	const number2 = new PhoneNumber('0962345678')
 	print(task, number1, 'pre')
 	print(task, number2, 'pre')
+
 }
