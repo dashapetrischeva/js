@@ -1,4 +1,4 @@
-if (confirm('Почати тестування?')) {
+if (confirm('Start testing?')) {
 
 	class DanceManager {
 		boysNames: string[]
@@ -15,19 +15,19 @@ if (confirm('Почати тестування?')) {
 			const randomIndex = Math.floor(Math.random() * this.girlsNames.length)
 			return this.girlsNames[randomIndex]
 		}
-		//Метод виведення пари для танців
+
 		showCoupleForDancing() {
 			const randomBoy = this.getRandomBoysName()
 			const randomGirl = this.getRandomGirlsName()
-			alert(`Пара для танців: ${randomBoy} та ${randomGirl}`)
+			alert(`Couple for dancing: ${randomBoy} and ${randomGirl}`)
 		}
-		// Метод run , який ініціює через кожні 5 секунд виведення нової пари для танців
+
 		run() {
 			setInterval(() => this.showCoupleForDancing(), 5000)
 		}
 	}
-	const boys = ['Іван', 'Петро', 'Олександр']
-	const girls = ['Ольга', 'Ірина', 'Катерина', 'Наталья']
+	const boys = ['Ivan', 'Petro', 'Oleksandr']
+	const girls = ['Olga', 'Irina', 'Katarina', 'Natalia']
 	const Ivan = new DanceManager(boys, girls)
 	Ivan.run()
 

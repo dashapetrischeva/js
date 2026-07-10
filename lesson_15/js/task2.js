@@ -1,6 +1,6 @@
 "use strict";
-if (confirm('Почати тестування?')) {
-    document.write(`<h2 class="title-solution">Рішення:</h2>`);
+if (confirm('Start testing?')) {
+    document.write(`<h2 class="title-solution">Solution:</h2>`);
     class Auto {
         constructor(initBrand, initTankSize, initNumberOfAvailableLiters, initNumberOfSeats, initNumberOfPassengers) {
             this.brand = initBrand;
@@ -9,26 +9,21 @@ if (confirm('Почати тестування?')) {
             this.numberOfSeats = initNumberOfSeats;
             this.numberOfPassengers = initNumberOfPassengers;
         }
-        // методи
-        // Заправка на вказану кількість літрів
         refueling(numLiter) {
             if ((this.numberOfAvailableLiters + numLiter) <= this.tankSize)
                 this.numberOfAvailableLiters += numLiter;
             else
                 this.numberOfAvailableLiters = this.tankSize;
         }
-        // Виведення кількості пасажирів
         getNumberPassengers() {
             return this.numberOfPassengers;
         }
-        // Додавання пасажирів
         addingPassengers(numPassengers) {
             if ((this.numberOfPassengers + numPassengers) <= this.numberOfSeats)
                 this.numberOfPassengers += numPassengers;
             else
                 this.numberOfPassengers = this.numberOfSeats;
         }
-        // Висадка пасажирів
         disembarkingPassengers(numPassengers) {
             if ((this.numberOfPassengers - numPassengers) >= 0)
                 this.numberOfPassengers -= numPassengers;
@@ -43,5 +38,5 @@ if (confirm('Почати тестування?')) {
     console.log(myAuto.numberOfPassengers);
     myAuto.disembarkingPassengers(2);
     console.log(myAuto.numberOfPassengers);
-    document.write(`<div>4) Відповідь у консолі</div>`);
+    document.write(`<div>4) Answer in the console</div>`);
 }
