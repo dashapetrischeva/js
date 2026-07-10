@@ -1,6 +1,6 @@
 "use strict";
-if (confirm('Почати тестування?')) {
-    document.write(`<h2 class="title-solution">Рішення:</h2>`);
+if (confirm('Start testing?')) {
+    document.write(`<h2 class="title-solution">Solution:</h2>`);
     class TMoney {
         constructor(initAmountUAH, initDollarExchangeRate) {
             this._dollarExchangeRate = 0;
@@ -36,14 +36,12 @@ if (confirm('Почати тестування?')) {
         withdrawMoney(val) {
             this.AmountDollars -= this.exchange(val);
         }
-        //визначення курсу долара, при якому сума у гривнях збільшиться на 100
         sumUAHIncrease100(valUAH) {
             const newRate = (valUAH + 100) / this.AmountDollars;
             return newRate;
         }
         toString() {
-            //день.місяць.рік
-            return `На рахунку: ${this.AmountDollars * this.DollarExchangeRate} грн`;
+            return `On account: ${this.AmountDollars * this.DollarExchangeRate} UAH`;
         }
     }
     try {
@@ -54,7 +52,7 @@ if (confirm('Почати тестування?')) {
         myMoney.withdrawMoney(1000);
         document.write(`${myMoney.toString()}<br>`);
         const sumUAH = myMoney.AmountDollars * myMoney.DollarExchangeRate;
-        document.write(`Курс долара, при якому ${sumUAH} збільшиться на 100: ${myMoney.sumUAHIncrease100(sumUAH).toFixed(2)}<br>`);
+        document.write(`Dollar rate at which ${sumUAH} will increase by 100: ${myMoney.sumUAHIncrease100(sumUAH).toFixed(2)}<br>`);
     }
     catch (error) {
         console.log(error.message);

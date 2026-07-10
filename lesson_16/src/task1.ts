@@ -1,5 +1,5 @@
-if (confirm('Почати тестування?')) {
-	document.write(`<h2 class="title-solution">Рішення:</h2>`)
+if (confirm('Start testing?')) {
+	document.write(`<h2 class="title-solution">Solution:</h2>`)
 
 	class TDate {
 		private _day: number = 0
@@ -23,7 +23,7 @@ if (confirm('Почати тестування?')) {
 		checkDay(n: number): number {
 
 			let d: number
-			// я веду всі розрахунки з розрахунком на те, що в місяці 30 днів
+
 			if (n > 30) {
 				d = n % 30 === 0 ? 30 : n % 30
 				this.addMonths(Math.floor((n - 1) / 30))
@@ -92,7 +92,7 @@ if (confirm('Почати тестування?')) {
 
 
 		toString() {
-			//день.місяць.рік
+
 			return `${this.Day}.${this.Month}.${this.Year}`
 		}
 
