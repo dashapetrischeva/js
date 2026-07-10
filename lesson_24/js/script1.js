@@ -1,8 +1,8 @@
-if (confirm('Почати тестування?')) {
+if (confirm('Start testing?')) {
 	class API {
 		async getRandomImage() {
 			const response = await fetch('https://cataas.com/cat?json=true')
-			if (!response.ok) throw new Error('Проблема із запитом')
+			if (!response.ok) throw new Error('Problem with the request')
 			const data = await response.json()
 			return data
 		}
@@ -64,11 +64,11 @@ if (confirm('Почати тестування?')) {
 			const data = await api.getRandomImage()
 			console.log(data)
 			const markup = new Markup(data)
-			item.append(markup.showHeader('Рандомний котик', 'Новий котик'))
+			item.append(markup.showHeader('Random Cat', 'New Cat'))
 			item.append(markup.showContent())
 			document.querySelector('.item__link').onclick = initRandom
 		} catch {
-			item.innerText = 'Не вдалося завантажити котика'
+			item.innerText = 'Failed to load a cat'
 		}
 	}
 	async function showCuteCats() {
@@ -77,10 +77,10 @@ if (confirm('Почати тестування?')) {
 			const api = new API()
 			const data = await api.getCatsByTag('cute')
 			const markup = new Markup(data)
-			container.append(markup.showHeader('Милі котики'))
+			container.append(markup.showHeader('Cute Cats'))
 			container.append(markup.showCats())
 		} catch {
-			container.innerText = 'Не вдалося завантажити милих котиків'
+			container.innerText = 'Failed to load cute cats'
 		}
 	}
 	initRandom()
